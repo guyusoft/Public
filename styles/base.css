@@ -1,0 +1,232 @@
+html {
+    font-family: "宋体","微软雅黑","Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    /*设置行高*/
+    line-height: 1.15;
+    /*  字体的小写字母 "x" 的高度与 "font-size" 高度之间的比率被称为一个字体的 aspect 值。
+        当字体拥有高的 aspect 值时，那么当此字体被设置为很小的尺寸时会更易阅读。
+        举例：Verdana 的 aspect 值是 0.58（意味着当字体尺寸为 100px 时，它的 x-height 是 58px ）。
+        Times New Roman 的 aspect 值是 0.46。
+        这就意味着 Verdana 在小尺寸时比 Times New Roman 更易阅读*/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /*  box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
+        例如，假如您需要并排放置两个带边框的框，可通过将 box-sizing 设置为 "border-box"。
+        这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。
+    */
+    -webkit-box-sizing: border-box; /* Safari */
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box;
+}
+
+body {
+    /*padding是控件的内容相对控件的边缘的边距．margin是控件边缘相对父空间的边距．
+    在CSS中margin是指从自身边框到另一个容器边框之间的距离，就是容器外距离。
+    在CSS中padding是指自身边框到自身内部另一个容器边框之间的距离，就是容器内距离。*/
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    overflow: hidden;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.col {
+    float: left;
+}
+
+.container {
+    clear: both;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+
+    .col1 {
+        width: 54px;
+    }
+
+    .col2 {
+        width: 108px;
+    }
+
+    .col3 {
+        width: 162px;
+    }
+
+    .col4 {
+        width: 216px;
+    }
+
+    .col5 {
+        width: 270px;
+    }
+
+    .col6 {
+        width: 324px;
+    }
+
+    .col7 {
+        width: 378px;
+    }
+
+    .col8 {
+        width: 432px;
+    }
+
+    .col9 {
+        width: 486px;
+    }
+
+    .col10 {
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+
+    .col1 {
+        width: 72px;
+    }
+
+    .col2 {
+        width: 144px;
+    }
+
+    .col3 {
+        width: 216px;
+    }
+
+    .col4 {
+        width: 288px;
+    }
+
+    .col5 {
+        width: 360px;
+    }
+
+    .col6 {
+        width: 432px;
+    }
+
+    .col7 {
+        width: 504px;
+    }
+
+    .col8 {
+        width: 576px;
+    }
+
+    .col9 {
+        width: 648px;
+    }
+
+    .col10 {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+
+    .col1 {
+        width: 96px;
+    }
+
+    .col2 {
+        width: 192px;
+    }
+
+    .col3 {
+        width: 288px;
+    }
+
+    .col4 {
+        width: 384px;
+    }
+
+    .col5 {
+        width: 480px;
+    }
+
+    .col6 {
+        width: 576px;
+    }
+
+    .col7 {
+        width: 672px;
+    }
+
+    .col8 {
+        width: 768px;
+    }
+
+    .col9 {
+        width: 864px;
+    }
+
+    .col10 {
+        width: 860px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+
+    .col1 {
+        width: 114px;
+    }
+
+    .col2 {
+        width: 228px;
+    }
+
+    .col3 {
+        width: 342px;
+    }
+
+    .col4 {
+        width: 456px;
+    }
+
+    .col5 {
+        width: 570px;
+    }
+
+    .col6 {
+        width: 684px;
+    }
+
+    .col7 {
+        width: 798px;
+    }
+
+    .col8 {
+        width: 912px;
+    }
+
+    .col9 {
+        width: 1026px;
+    }
+
+    .col10 {
+        width: 1140px;
+    }
+}

@@ -1,0 +1,377 @@
+.content-group dd, .content-group dl, .content-group dt, .content-group li, .content-group ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-group {
+    padding-top: 1px;
+}
+
+    .content-group .zq-main-head {
+        text-align: center;
+    }
+
+        .content-group .zq-main-head h1 {
+            color: #373d41;
+            text-align: center;
+        }
+
+        .content-group .zq-main-head p {
+            color: #5f6367;
+            text-align: center;
+        }
+
+    .content-group .zq-sub-desc {
+        padding: 0 0 60px;
+        text-align: center;
+    }
+
+        .content-group .zq-sub-desc p {
+            font-size: 16px;
+            color: #999;
+        }
+
+.cloud-service .card-area {
+    margin: 82px auto 0;
+    height: 560px;
+}
+
+    .cloud-service .card-area .bg-e8e8e8 {
+        background: #e8e8e8;
+    }
+
+    .cloud-service .card-area .bg-e1e1e1 {
+        background: #e1e1e1;
+    }
+
+    .cloud-service .card-area .card-item {
+        z-index: 4;
+        transition: all .3s cubic-bezier(.4,0,.2,1),z-index 0s .12s;
+        position: relative;
+        float: left;
+        width: 17%;
+        height: 521px;
+        background-color: transparent;
+    }
+
+        .cloud-service .card-area .card-item + .card-item {
+            margin-left: -1px;
+        }
+
+        .cloud-service .card-area .card-item .card {
+            transition: all .3s cubic-bezier(.4,0,.2,1),z-index 0s .12s;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background: #fff;
+        }
+
+            .cloud-service .card-area .card-item .card .card-content {
+                width: 100%;
+                line-height: 2;
+            }
+
+                .cloud-service .card-area .card-item .card .card-content.content-first {
+                    transition: all .12s cubic-bezier(.4,0,.2,1) .18s;
+                    z-index: 3;
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(100));
+                }
+
+                .cloud-service .card-area .card-item .card .card-content.content-second {
+                    transition: all .12s cubic-bezier(.4,0,.2,1) 0s;
+                    z-index: 2;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0));
+                    line-height: 2;
+                }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second li {
+                        float: left;
+                        width: 50%;
+                    }
+
+            .cloud-service .card-area .card-item .card .card-content, .cloud-service .card-area .card-item .card .card-title {
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            .cloud-service .card-area .card-item .card .card-title {
+                padding-top: 1px;
+                transition: all .3s cubic-bezier(.4,0,.2,1),z-index 0s .12s;
+                height: 145px;
+                line-height: 26px;
+                font-size: 14px;
+                top: 0;
+                background: #1b77b9;
+                border-left: 1px solid #3285c0;
+            }
+
+                .cloud-service .card-area .card-item .card .card-title .content {
+                    position: absolute;
+                    bottom: -2px;
+                    width: 100%;
+                }
+
+                .cloud-service .card-area .card-item .card .card-title h1 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #d9efff;
+                    margin-bottom: 0;
+                }
+
+                .cloud-service .card-area .card-item .card .card-title .short-info {
+                    color: #8dbbdc;
+                    font-size: 14px;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+                .cloud-service .card-area .card-item .card .card-title .zq-product-img {
+                    width: 40px;
+                    height: 40px;
+                    margin: 10px auto;
+                    position: relative;
+                }
+
+                    .cloud-service .card-area .card-item .card .card-title .zq-product-img img {
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-title .zq-product-img .un-hover {
+                        z-index: 1;
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(100));
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-title .zq-product-img .with-hover {
+                        z-index: 2;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0));
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-title .short-info, .cloud-service .card-area .card-item .card .card-title .zq-product-img img, .cloud-service .card-area .card-item .card .card-title h1 {
+                        transition: all .15s cubic-bezier(.4,0,.2,1) 0s;
+                    }
+
+            .cloud-service .card-area .card-item .card .card-content {
+                height: 376px;
+                position: absolute;
+                top: 145px;
+            }
+
+                .cloud-service .card-area .card-item .card .card-content.content-first .content-first-list {
+                    width: 100%;
+                    max-width: 250px;
+                    font-size: 16px;
+                    color: #373d41;
+                    margin-top: 47px;
+                    margin-bottom: 47px;
+                }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-first .content-first-list li {
+                        margin-bottom: 30px;
+                    }
+
+                .cloud-service .card-area .card-item .card .card-content.content-second {
+                    width: 90%;
+                    left: 25px;
+                    font-size: 14px;
+                    color: #a9b0b4;
+                    text-align: left;
+                    padding-top: 26px;
+                }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second .main-head {
+                        color: #3db1ea;
+                        font-size: 18px;
+                        line-height: 28px;
+                        margin-bottom: 10px;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second p {
+                        margin: 5px 0;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second .main-tip {
+                        color: #232933;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second .main-desc {
+                        color: #8c8c8c;
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second .main-btn {
+                        display: inline-block;
+                        text-align: center;
+                        cursor: pointer;
+                        width: 160px;
+                        height: 38px;
+                        line-height: 38px;
+                        font-size: 16px !important;
+                        color: #fff;
+                        margin-top: 22px;
+                        margin-bottom: 33px;
+                        border-radius: 19px;
+                        background: #3db1ea;
+                        border: none;
+                        transition: color .3s ease-in-out,background .3s ease-in-out;
+                    }
+
+                        .cloud-service .card-area .card-item .card .card-content.content-second .main-btn:hover {
+                            color: #fff;
+                            background: #1b77b9;
+                        }
+
+                    .cloud-service .card-area .card-item .card .card-content.content-second .main-white-btn {
+                        display: inline-block;
+                        text-align: center;
+                        cursor: pointer;
+                        width: 160px;
+                        height: 36px;
+                        line-height: 36px;
+                        border: 1px solid #3db1ea;
+                        font-size: 16px !important;
+                        color: #3db1ea;
+                        margin-top: 22px;
+                        margin-bottom: 33px;
+                        border-radius: 19px;
+                        background: #fff;
+                        transition: color .3s ease-in-out,background .3s ease-in-out;
+                    }
+
+                        .cloud-service .card-area .card-item .card .card-content.content-second .main-white-btn:hover {
+                            color: #fff;
+                            background: #3db1ea;
+                        }
+
+                .cloud-service .card-area .card-item .card .card-content .other-info {
+                    width: 105%;
+                    height: 80px;
+                    overflow: hidden;
+                    line-height: 22px;
+                    padding-top: 20px;
+                    font-size: 12px;
+                }
+
+                    .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list {
+                        width: 27%;
+                        height: 70px;
+                        background: #f2f2f2;
+                        margin-right: 25px;
+                        padding: 0 0 0 10px;
+                        position: relative;
+                    }
+
+                        .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list .c-a-arrow {
+                            position: absolute;
+                            right: 10px;
+                            top: 15px;
+                            background-position: -200px 0;
+                        }
+
+                        .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list:hover {
+                            background: #3db1ea;
+                        }
+
+                            .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list:hover .c-a-arrow {
+                                background-position: -200px -17px;
+                            }
+
+                            .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list:hover .other-desc, .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list:hover .other-head {
+                                color: #fff;
+                            }
+
+                        .cloud-service .card-area .card-item .card .card-content .other-info .other-info-list .list-context {
+                            color: #00c1de;
+                        }
+
+                    .cloud-service .card-area .card-item .card .card-content .other-info .other-head {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000;
+                        margin-bottom: 0;
+                    }
+
+                    .cloud-service .card-area .card-item .card .card-content .other-info .other-desc {
+                        margin-top: 2px;
+                        font-size: 12px;
+                        color: #999;
+                    }
+
+        .cloud-service .card-area .card-item.active {
+            z-index: 6;
+            box-shadow: 0 0 30px rgba(0,0,0,.2);
+            width: 49%;
+            height: 535px;
+        }
+
+            .cloud-service .card-area .card-item.active .card .card-title {
+                background-color: #3db1ea;
+                height: 159px;
+                top: -15px;
+                border: none;
+            }
+
+                .cloud-service .card-area .card-item.active .card .card-title .short-info {
+                    color: #9ed8f5;
+                }
+
+                .cloud-service .card-area .card-item.active .card .card-title h1 {
+                    color: #fff;
+                }
+
+            .cloud-service .card-area .card-item.active .card .card-content.content-first {
+                transition: all .12s cubic-bezier(.4,0,.2,1) 0s;
+                z-index: 2;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0));
+            }
+
+            .cloud-service .card-area .card-item.active .card .card-content.content-second {
+                transition: all .12s cubic-bezier(.4,0,.2,1) .18s;
+                z-index: 3;
+                opacity: 1;
+                filter: alpha(opacity=100);
+                -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(100));
+            }
+
+.cloud-service .icon40x40 {
+    width: 40px;
+    height: 40px;
+}
+
+.cloud-service .zq-icon {
+    display: inline-block;
+    background: url(../images/introductionicon.png) no-repeat;
+}
+
+.cloud-service .crad-area-icon1 {
+    background-position: 0 0;
+}
+
+.cloud-service .crad-area-icon2 {
+    background-position: -40px 0;
+}
+
+
+.cloud-service .crad-area-icon3 {
+    background-position: -80px 0;
+}
+
+
+.cloud-service .crad-area-icon4 {
+    background-position: -120px 0;
+}

@@ -1,0 +1,119 @@
+.content-group dd, .content-group dl, .content-group dt, .content-group li, .content-group ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-group .main-wrap {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (min-width: 1500px) {
+    .content-group .main-wrap {
+        width: 1500px;
+    }
+}
+
+.content-group {
+    padding-top: 1px;
+}
+
+    .content-group .zq-main-head {
+        text-align: center;
+    }
+
+        .content-group .zq-main-head h1 {
+            color: #373d41;
+            text-align: center;
+        }
+
+        .content-group .zq-main-head p {
+            color: #5f6367;
+            text-align: center;
+        }
+
+    .content-group .zq-sub-desc {
+        padding: 0 0 60px;
+        text-align: center;
+    }
+
+        .content-group .zq-sub-desc p {
+            font-size: 16px;
+            color: #999;
+        }
+
+.popular-application-content .popular-application-item {
+    width: 25%;
+    float: left;
+}
+
+    .popular-application-content .popular-application-item .item-detail {
+        padding: 0 15px;
+        text-align: center;
+    }
+
+        .popular-application-content .popular-application-item .item-detail h3 {
+            font-size: 20px;
+            color: #373d41;
+        }
+
+        .popular-application-content .popular-application-item .item-detail .item-info {
+            color: #3db1ea;
+            margin: 20px 0;
+        }
+
+            .popular-application-content .popular-application-item .item-detail .item-info a {
+                color: #3db1ea;
+            }
+
+        .popular-application-content .popular-application-item .item-detail .item-desc {
+            color: #a7a7a7;
+            line-height: 24px;
+        }
+
+        .popular-application-content .popular-application-item .item-detail .p-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 3px;
+            background: #a7a7a7;
+            border-radius: 3px;
+        }
+
+    .popular-application-content .popular-application-item .item-img-panel {
+        display: inline-block;
+    }
+
+.popular-application-content .icon64x64 {
+    width: 64px;
+    height: 64px;
+}
+
+.popular-application-content .zq-icon {
+    display: inline-block;
+    background: url(../images/introductionicon.png) no-repeat;
+}
+
+.popular-application-content .popular-app-icon1 {
+    background-position: 0 -110px;
+}
+
+.popular-application-content .popular-app-icon2 {
+    background-position: -64px -110px;
+}
+
+
+.popular-application-content .popular-app-icon3 {
+    background-position: -128px -110px;
+}
+
+
+.popular-application-content .popular-app-icon4{
+    background-position: -192px -110px;
+}
+
+.popular-application-content .popular-app-icon5{
+    background-position: -256px -110px;
+}
