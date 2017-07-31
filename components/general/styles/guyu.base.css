@@ -1,0 +1,55 @@
+﻿html {
+    font-family: "宋体","微软雅黑","Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    /*设置行高*/
+    line-height: 1.15;
+    /*  字体的小写字母 "x" 的高度与 "font-size" 高度之间的比率被称为一个字体的 aspect 值。
+        当字体拥有高的 aspect 值时，那么当此字体被设置为很小的尺寸时会更易阅读。
+        举例：Verdana 的 aspect 值是 0.58（意味着当字体尺寸为 100px 时，它的 x-height 是 58px ）。
+        Times New Roman 的 aspect 值是 0.46。
+        这就意味着 Verdana 在小尺寸时比 Times New Roman 更易阅读*/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /*  box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
+        例如，假如您需要并排放置两个带边框的框，可通过将 box-sizing 设置为 "border-box"。
+        这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。
+    */
+    -webkit-box-sizing: border-box; /* Safari */
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box;
+}
+
+body {
+    /*padding是控件的内容相对控件的边缘的边距．margin是控件边缘相对父空间的边距．
+    在CSS中margin是指从自身边框到另一个容器边框之间的距离，就是容器外距离。
+    在CSS中padding是指自身边框到自身内部另一个容器边框之间的距离，就是容器内距离。*/
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    overflow: hidden;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container{
+    /*overflow:hidden 可以清除浮动带来的父控件高度丢失的问题*/
+    overflow:hidden;
+    /*清除浮动*/
+    clear:both;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
