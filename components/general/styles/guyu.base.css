@@ -148,6 +148,7 @@ ul, li {
                 .solution .list .item .content .link:hover {
                     color: #1d99d6;
                     background: #fff;
+                    cursor: pointer;
                 }
 
             .solution .list .item .content .description, .solution .list .item .content .link {
@@ -173,6 +174,21 @@ ul, li {
         text-align: center;
         margin: 0 auto;
         color: #000;
+    }
+
+        .product .header .title {
+            font-size: 18px;
+        }
+
+        .product .header .summary {
+            font-size: 14px;
+            color: #373d41;
+        }
+
+    .product .content {
+        width: 1300px;
+        margin:0 auto;
+        color:#000;
     }
 
 .content-group dd, .content-group dl, .content-group dt, .content-group li, .content-group ul {
