@@ -45,7 +45,7 @@ ul, li {
     /*清除浮动*/
     clear: both;
     width: 100%;
-    min-width: 1500px;
+    min-width: 1200px;
 }
 
 .left {
@@ -94,17 +94,17 @@ ul, li {
 
     .solution .list {
         margin: 0 auto;
-        width: 1300px;
+        width: 900px;
         overflow: hidden;
+        padding:0;
     }
 
         .solution .list .item {
             float: left;
             width: 300px;
-            background-color: #3db1ea;
             height: 300px;
             border: none;
-            box-shadow: 0 0 5px rgba(0,0,0,.2);
+            box-shadow: 2px 2px 5px rgba(0,0,0,.2);
         }
 
             .solution .list .item:hover {
@@ -169,7 +169,7 @@ ul, li {
 }
 
     .product .header {
-        width: 1300px;
+        width: 1000px;
         overflow: hidden;
         text-align: center;
         margin: 0 auto;
@@ -186,22 +186,22 @@ ul, li {
         }
 
     .product .content {
-        width: 1500px;
+        width: 1000px;
         margin: 0 auto;
         color: #000;
         padding: 0;
     }
 
         .product .content .list {
-            width: 1500px;
+            width: 1000px;
             height: 560px;
             padding: 0;
             margin: 40px auto 0;
         }
 
             .product .content .list .item {
-                background-color: #ed7723;
-                width: 300px;
+                background-color: #3db1ea;
+                width: 200px;
                 float: left;
                 z-index: 4;
                 height: 480px;
@@ -210,9 +210,10 @@ ul, li {
             }
 
                 .product .content .list .item.active {
+                    background-color: #ed7723;
                     z-index: 6;
                     box-shadow: 0 0 30px rgba(0,0,0,.2);
-                    width: 500px;
+                    width: 400px;
                     height: 500px;
                     top: -10px;
                     transition: all .3s cubic-bezier(.4,0,.2,1),z-index 0s .12s;
@@ -283,10 +284,10 @@ ul, li {
 
                 .product .content .list .item.active .details {
                     z-index: 3;
-                    position:relative;
-                    width:100%;
-                    text-align:center;
-                    vertical-align:middle;
+                    position: relative;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: middle;
                 }
 
                 .product .content .list .item .details .detaillink {
@@ -303,11 +304,11 @@ ul, li {
                     text-align: center;
                 }
 
-                    .product .content .list .item.active .details .detaillink:hover {
-                        color: #1d99d6;
-                        background: #fff;
-                        cursor: pointer;
-                    }
+                .product .content .list .item.active .details .detaillink:hover {
+                    color: #1d99d6;
+                    background: #fff;
+                    cursor: pointer;
+                }
 
                 .product .content .list .item .details .detaillink {
                     opacity: 0;
@@ -327,7 +328,7 @@ ul, li {
 }
 
     .prompt .main-wrap {
-        width: 1500px;
+        width: 1000px;
         margin: 0 auto;
         position: relative;
     }
@@ -474,25 +475,36 @@ ul, li {
                     }
 
     .footer .copyright {
-        width: 100%;
+        width: 450px;
         margin-top: 20px;
         height: 30px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-        .footer .copyright span {
-            text-align: center;
-            font-size: 14px;
-            color: #373d41;
-            margin-top: 20px;
+        .footer .copyright .logo {
+            width: 120px;
+            height: 30px;
+            float: left;
         }
 
-    .footer .beian {
-        width: 100%;
-        height: 20px;
-    }
+            .footer .copyright .logo img {
+                width: 120px;
+                height: 30px;
+            }
 
-        .footer .beian span {
-            text-align: center;
-            font-size: 14px;
+        .footer .copyright .info {
             color: #373d41;
+            float: right;
+            width: 330px;
+            height: 30px;
+            font-size: 14px;
+            margin-top: 7px;
+            text-align: left;
         }
+
+            .footer .copyright .info a {
+                font-size: 14px;
+                color: #3db1ea;
+            }
