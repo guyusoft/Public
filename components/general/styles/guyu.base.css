@@ -79,17 +79,17 @@ ul, li {
 
             .navigation ul li a {
                 font-size: 14px;
-                color: #808080;
+                color: #999999;
             }
 
                 .navigation ul li a:hover {
                     font-size: 14px;
-                    color: #ed7723;
+                    color: #ff6600;
                 }
 
 .solution {
-    margin: 0 auto;
-    background-color: #ed7723;
+    margin-top:20px;
+    background-color:#0099CC;
 }
 
     .solution .list {
@@ -97,6 +97,7 @@ ul, li {
         width: 900px;
         overflow: hidden;
         padding:0;
+        background-color: #FF6600;
     }
 
         .solution .list .item {
@@ -146,7 +147,7 @@ ul, li {
             }
 
                 .solution .list .item .content .link:hover {
-                    color: #1d99d6;
+                    color: #0099CC;
                     background: #fff;
                     cursor: pointer;
                 }
@@ -182,7 +183,7 @@ ul, li {
 
         .product .header .summary {
             font-size: 14px;
-            color: #373d41;
+            color: #999999;
         }
 
     .product .content {
@@ -194,27 +195,27 @@ ul, li {
 
         .product .content .list {
             width: 1000px;
-            height: 560px;
+            height: 360px;
             padding: 0;
             margin: 40px auto 0;
         }
 
             .product .content .list .item {
-                background-color: #3db1ea;
+                background-color: #ff6600;
                 width: 200px;
                 float: left;
                 z-index: 4;
-                height: 480px;
+                height: 320px;
                 position: relative;
                 box-shadow: 0 0 5px rgba(0,0,0,.2);
             }
 
                 .product .content .list .item.active {
-                    background-color: #ed7723;
+                    background-color: #0099CC;
                     z-index: 6;
                     box-shadow: 0 0 30px rgba(0,0,0,.2);
                     width: 400px;
-                    height: 500px;
+                    height: 360px;
                     top: -10px;
                     transition: all .3s cubic-bezier(.4,0,.2,1),z-index 0s .12s;
                 }
@@ -436,18 +437,15 @@ ul, li {
     width: 100%;
     text-align: center;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #000;
 }
 
     .footer .links {
         width: 100%;
-        margin: 0 auto;
     }
 
         .footer .links .main {
-            width: 800px;
+            width: 600px;
             margin: 0 auto;
             padding: 0;
             overflow: hidden;
