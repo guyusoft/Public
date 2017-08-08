@@ -1,0 +1,5 @@
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.DataContract\bin\Debug\Guyusoft.IMS.Utility.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.DataContract\bin\Debug\Guyusoft.IMS.Utility.DataContract.pdb
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.DataContract\obj\Debug\Guyusoft.IMS.Utility.DataContract.csprojResolveAssemblyReference.cache
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.DataContract\obj\Debug\Guyusoft.IMS.Utility.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.DataContract\obj\Debug\Guyusoft.IMS.Utility.DataContract.pdb
