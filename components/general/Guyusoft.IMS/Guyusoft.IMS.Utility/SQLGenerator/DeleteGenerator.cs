@@ -7,7 +7,10 @@ namespace Guyusoft.IMS.Utility.SQLGenerator
     {
         public string GenerateSql(object obj)
         {
-            throw new NotImplementedException();
+            var keyName = "Id";
+            var keyValue = Helper.GetValueByPropertyNameFromObject(obj, keyName);
+
+            return "DELETE FROM "+ obj.GetType().Name + " WHERE " + keyName + " = " + keyValue;
         }
     }
 }

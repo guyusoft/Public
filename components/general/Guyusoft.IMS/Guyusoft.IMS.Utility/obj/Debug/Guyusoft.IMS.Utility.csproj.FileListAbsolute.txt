@@ -5,3 +5,5 @@ D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\obj\Debu
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\obj\Debug\Guyusoft.IMS.Utility.pdb
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\bin\Debug\Guyusoft.IMS.Utility.DataContract.dll
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\bin\Debug\Guyusoft.IMS.Utility.DataContract.pdb
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\bin\Debug\Guyusoft.IMS.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility\bin\Debug\Guyusoft.IMS.DataContract.pdb

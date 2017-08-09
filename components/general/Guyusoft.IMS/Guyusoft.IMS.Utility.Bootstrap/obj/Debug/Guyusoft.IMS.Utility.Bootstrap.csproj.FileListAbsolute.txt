@@ -18,3 +18,5 @@ D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstra
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstrap\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstrap\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstrap\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstrap\bin\Debug\Guyusoft.IMS.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.Utility.Bootstrap\bin\Debug\Guyusoft.IMS.DataContract.pdb

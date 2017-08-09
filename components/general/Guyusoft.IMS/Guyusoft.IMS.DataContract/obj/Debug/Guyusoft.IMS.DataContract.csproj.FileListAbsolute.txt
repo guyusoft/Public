@@ -1,0 +1,4 @@
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DataContract\bin\Debug\Guyusoft.IMS.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DataContract\bin\Debug\Guyusoft.IMS.DataContract.pdb
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DataContract\obj\Debug\Guyusoft.IMS.DataContract.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DataContract\obj\Debug\Guyusoft.IMS.DataContract.pdb
