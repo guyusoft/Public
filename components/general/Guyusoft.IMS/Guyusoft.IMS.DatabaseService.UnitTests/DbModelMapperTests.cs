@@ -1,4 +1,5 @@
 ﻿using Guyusoft.IMS.DatabaseService.DataContract;
+using Guyusoft.IMS.DataContract.Models;
 using NUnit.Framework;
 using System.Data;
 
@@ -12,9 +13,10 @@ namespace Guyusoft.IMS.DatabaseService.UnitTests
         {
             IDbModelMapper mapper = new DbModelMapper();
 
-            var instance = mapper.MapTo<TestMapperClass>(BuildDataSet());
+            var instance = mapper.MapTo<NavigationMenu>(BuildDataSet());
 
             Assert.IsNotNull(instance);
+            Assert.AreEqual(1, instance.Id);
         }
 
         private DataSet BuildDataSet()
@@ -26,24 +28,21 @@ namespace Guyusoft.IMS.DatabaseService.UnitTests
             DataColumn col = new DataColumn("Id", typeof(int));
             dt.Columns.Add(col);
 
-            DataColumn col1 = new DataColumn("Desc", typeof(string));
+            DataColumn col1 = new DataColumn("Text", typeof(string));
             dt.Columns.Add(col1);
+
+            DataColumn col2 = new DataColumn("Href", typeof(string));
+            dt.Columns.Add(col2);
 
             DataRow rw = dt.NewRow(); 
             rw["Id"] = 1;
-            rw["Desc"] = "Test1";
+            rw["Text"] = "Test1";
+            rw["Href"] = "www.sohu.com";
             dt.Rows.Add(rw);
 
             ds.Tables.Add(dt);
 
             return ds;
-        }
-
-        public class TestMapperClass
-        {
-            public int Id { get; set; }
-
-            public string Desc { get; set; }
         }
     }
 }

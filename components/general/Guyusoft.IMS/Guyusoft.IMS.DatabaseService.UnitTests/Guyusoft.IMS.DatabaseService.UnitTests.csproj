@@ -40,6 +40,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="guyusoft.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -49,6 +50,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Guyusoft.IMS.DatabaseService.DataContract\Guyusoft.IMS.DatabaseService.DataContract.csproj">
@@ -58,6 +60,10 @@
     <ProjectReference Include="..\Guyusoft.IMS.DatabaseService\Guyusoft.IMS.DatabaseService.csproj">
       <Project>{a99e59b5-aeb0-4a8a-961a-6055c332ec8b}</Project>
       <Name>Guyusoft.IMS.DatabaseService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">
+      <Project>{5c60e15d-efc3-4f24-aef1-adae32a0564e}</Project>
+      <Name>Guyusoft.IMS.DataContract</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,7 @@ namespace Guyusoft.IMS.DatabaseService
     {
         public T MapTo<T>(DataSet ds)
         {
-            T t = (T)Assembly.GetExecutingAssembly().CreateInstance(typeof(T).FullName);
+            T t = (T)Assembly.GetAssembly(typeof(T)).CreateInstance(typeof(T).FullName);
 
             foreach (DataRow rowRecord in ds.Tables[0].Rows)
             {
