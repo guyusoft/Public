@@ -1,0 +1,4 @@
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService\bin\Debug\Guyusoft.IMS.DatabaseService.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService\bin\Debug\Guyusoft.IMS.DatabaseService.pdb
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService\obj\Debug\Guyusoft.IMS.DatabaseService.dll
+D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService\obj\Debug\Guyusoft.IMS.DatabaseService.pdb

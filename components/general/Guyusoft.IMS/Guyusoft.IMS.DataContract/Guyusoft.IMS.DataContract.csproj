@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Exceptions\NoPublicPropertyException.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
