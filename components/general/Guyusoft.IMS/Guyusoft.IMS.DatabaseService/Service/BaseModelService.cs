@@ -20,7 +20,7 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.GenerateSql(t);
 
-            return _executer.Execute<BaseModel>(sql);
+            return _executer.Insert<BaseModel>(sql);
         }
 
         public bool Delete(BaseModel t)
@@ -38,16 +38,17 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.GenerateSql(new BaseModel { Id = id });
 
-            return _executer.Execute<BaseModel>(sql);
+            return _executer.Get<BaseModel>(sql);
         }
 
         public BaseModel Update(BaseModel t)
         {
-            var generator = _factory.GetGenerator(SQLGenerationAction.Update);
+            //var generator = _factory.GetGenerator(SQLGenerationAction.Update);
 
-            var sql = generator.GenerateSql(t);
+            //var sql = generator.GenerateSql(t);
 
-            return _executer.Execute<BaseModel>(sql);
+            //return _executer.Execute<BaseModel>(sql);
+            return null;
         }
     }
 }

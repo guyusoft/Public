@@ -20,7 +20,7 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.GenerateSql(t);
 
-            return _executer.Execute<NavigationMenu>(sql);
+            return _executer.Insert<NavigationMenu>(sql);
         }
 
         public bool Delete(NavigationMenu t)
@@ -38,16 +38,17 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.GenerateSql(new NavigationMenu { Id = id });
 
-            return _executer.Execute<NavigationMenu>(sql);
+            return _executer.Get<NavigationMenu>(sql);
         }
 
         public NavigationMenu Update(NavigationMenu t)
         {
-            var generator = _factory.GetGenerator(SQLGenerationAction.Update);
+            //var generator = _factory.GetGenerator(SQLGenerationAction.Update);
 
-            var sql = generator.GenerateSql(t);
+            //var sql = generator.GenerateSql(t);
 
-            return _executer.Execute<NavigationMenu>(sql);
+            //return _executer.Execute<NavigationMenu>(sql);
+            return null;
         }
     }
 }

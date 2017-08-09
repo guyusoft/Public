@@ -20,7 +20,11 @@ namespace Guyusoft.IMS.Utility.SQLGenerator
             var keyName = "Id";
 
             var sql = "INSERT INTO " + tableName + " (" + string.Join(",", allPublicProperties) + ") VALUES (";
-            sql = sql.Replace(keyName + ",", "");
+            sql = sql.Replace(keyName + ",", "").Replace("," + keyName, "");
+            if (sql.EndsWith(","))
+            {
+                sql = sql.Substring(0, sql.Length - 1);
+            }
 
             foreach (var publicProperty in allPublicProperties)
             {
@@ -30,10 +34,12 @@ namespace Guyusoft.IMS.Utility.SQLGenerator
                 }
                 var  v = Helper.GetValueByPropertyNameFromObject(obj, publicProperty);
 
-                sql = sql + "'" + v.ToString() + "'";
+                sql = sql + "'" + v.ToString() + "',";
             }
 
-            sql = sql + ")";
+            sql = sql.Substring(0, sql.Length - 1);
+
+            sql = sql + "); SELECT @@IDENTITY";
 
             return sql;
         }

@@ -8,11 +8,9 @@ namespace Guyusoft.IMS.DatabaseService
     public class SqlExecutor : ISqlExecuter
     {
         public IDbModelMapper _mapper = null;
-        private SqlConnection _connection = null;
 
         public SqlExecutor(IDbModelMapper mapper)
         {
-            _connection = new SqlConnection();
             _mapper = mapper;
         }
 
@@ -20,13 +18,13 @@ namespace Guyusoft.IMS.DatabaseService
         {
             using (var conn = SqlConnectionFactory.CreateConnection())
             {
-                var sqlCmd = new SqlCommand(sql, _connection);
+                var sqlCmd = new SqlCommand(sql, conn);
 
                 return sqlCmd.ExecuteNonQuery();
             }
         }
 
-        public T Execute<T>(string sql)
+        public T Get<T>(string sql)
         {
             using (var conn = SqlConnectionFactory.CreateConnection())
             {
@@ -36,6 +34,29 @@ namespace Guyusoft.IMS.DatabaseService
                 sqlAdapter.Fill(dataset);
 
                 return _mapper.MapTo<T>(dataset);
+            }
+        }
+
+
+        public T Insert<T>(string insertSql, string selectSql)
+        {
+            using (var conn = SqlConnectionFactory.CreateConnection())
+            {
+                var sqlCmd = new SqlCommand(insertSql, conn);
+                conn.Open();
+                int id = int.Parse(sqlCmd.ExecuteScalar().ToString());
+
+                if (id > 0)
+                {
+                    var sqlAdapter = new SqlDataAdapter(selectSql, conn);
+                    var dataset = new DataSet();
+
+                    sqlAdapter.Fill(dataset);
+
+                    return _mapper.MapTo<T>(dataset);
+                }
+
+                return default(T);
             }
         }
     }

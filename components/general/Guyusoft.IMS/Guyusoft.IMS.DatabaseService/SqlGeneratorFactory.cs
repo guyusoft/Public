@@ -15,7 +15,7 @@ namespace Guyusoft.IMS.DatabaseService
         }
         public ISqlGenerator GetGenerator(SQLGenerationAction action)
         {
-            return _generators.Where(x => x.ToString().Contains(SQLGenerationAction.Select.ToString() + "Generator")).FirstOrDefault();
+            return _generators.Where(x => x.ToString().Contains(action.ToString() + "Generator")).FirstOrDefault();
         }
     }
 }
