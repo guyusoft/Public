@@ -1,4 +1,0 @@
-D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService.DataContract\bin\Debug\Guyusoft.IMS.DatabaseService.DataContract.dll
-D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService.DataContract\bin\Debug\Guyusoft.IMS.DatabaseService.DataContract.pdb
-D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService.DataContract\obj\Debug\Guyusoft.IMS.DatabaseService.DataContract.dll
-D:\Guyusoft\public\components\general\Guyusoft.IMS\Guyusoft.IMS.DatabaseService.DataContract\obj\Debug\Guyusoft.IMS.DatabaseService.DataContract.pdb
