@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Guyusoft.IMS.Utility.SQLGenerator
 {
-    public class SelectGenerator : IGenerator
+    public class SelectGenerator : ISqlGenerator
     {
         public string GenerateSql(object obj)
         {

@@ -1,4 +1,4 @@
-﻿namespace Guyusoft.IMS
+﻿namespace Guyusoft.IMS.DataContract
 {
     public interface IComponent
     {

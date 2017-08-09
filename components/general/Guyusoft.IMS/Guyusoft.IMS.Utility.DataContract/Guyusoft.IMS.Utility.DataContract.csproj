@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLGenerator\Enums\SQLGenerationAction.cs" />
-    <Compile Include="SQLGenerator\IGenerator.cs" />
+    <Compile Include="SQLGenerator\ISqlGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="guyusoft.pfx" />

@@ -1,6 +1,6 @@
 ﻿namespace Guyusoft.IMS.Utility.DataContract.SQLGenerator
 {
-    public interface IGenerator
+    public interface ISqlGenerator
     {
         string GenerateSql(object obj);
     }

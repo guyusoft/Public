@@ -36,10 +36,27 @@
     <AssemblyOriginatorKeyFile>guyusoft.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ISqlGeneratorFactory.cs" />
+    <Compile Include="IDbModelMapper.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="ISqlExecuter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="guyusoft.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">
+      <Project>{5C60E15D-EFC3-4F24-AEF1-ADAE32A0564E}</Project>
+      <Name>Guyusoft.IMS.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.Utility.DataContract\Guyusoft.IMS.Utility.DataContract.csproj">
+      <Project>{2B41D903-02F0-414B-92C6-F606D9B080A0}</Project>
+      <Name>Guyusoft.IMS.Utility.DataContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

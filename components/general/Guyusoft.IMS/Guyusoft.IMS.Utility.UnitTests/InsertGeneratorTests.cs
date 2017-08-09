@@ -13,7 +13,7 @@ namespace Guyusoft.IMS.Utility.UnitTests
             var testClass = new TestClass();
             testClass.Description = "Test";
 
-            IGenerator generator = new InsertGenerator();
+            ISqlGenerator generator = new InsertGenerator();
 
             var sql = generator.GenerateSql(testClass);
 

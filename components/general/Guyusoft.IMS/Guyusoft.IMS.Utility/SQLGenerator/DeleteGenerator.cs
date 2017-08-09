@@ -3,7 +3,7 @@ using System;
 
 namespace Guyusoft.IMS.Utility.SQLGenerator
 {
-    public class DeleteGenerator : IGenerator
+    public class DeleteGenerator : ISqlGenerator
     {
         public string GenerateSql(object obj)
         {

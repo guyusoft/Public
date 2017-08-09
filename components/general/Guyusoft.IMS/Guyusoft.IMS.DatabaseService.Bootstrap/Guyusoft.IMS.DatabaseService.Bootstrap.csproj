@@ -44,6 +44,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Guyusoft.IMS.DatabaseService.DataContract\Guyusoft.IMS.DatabaseService.DataContract.csproj">
+      <Project>{AC5CC5B5-D997-419E-8598-667698391E83}</Project>
+      <Name>Guyusoft.IMS.DatabaseService.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DatabaseService\Guyusoft.IMS.DatabaseService.csproj">
+      <Project>{a99e59b5-aeb0-4a8a-961a-6055c332ec8b}</Project>
+      <Name>Guyusoft.IMS.DatabaseService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">
+      <Project>{5C60E15D-EFC3-4F24-AEF1-ADAE32A0564E}</Project>
+      <Name>Guyusoft.IMS.DataContract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Guyusoft.IMS\Guyusoft.IMS.csproj">
       <Project>{88f8c6eb-7827-4612-8a44-f2c6b3736b8e}</Project>
       <Name>Guyusoft.IMS</Name>

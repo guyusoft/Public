@@ -44,6 +44,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">
+      <Project>{5C60E15D-EFC3-4F24-AEF1-ADAE32A0564E}</Project>
+      <Name>Guyusoft.IMS.DataContract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Guyusoft.IMS.Utility.DataContract\Guyusoft.IMS.Utility.DataContract.csproj">
       <Project>{2b41d903-02f0-414b-92c6-f606d9b080a0}</Project>
       <Name>Guyusoft.IMS.Utility.DataContract</Name>

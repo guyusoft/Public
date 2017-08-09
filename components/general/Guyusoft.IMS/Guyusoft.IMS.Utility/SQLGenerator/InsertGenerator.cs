@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Guyusoft.IMS.Utility.SQLGenerator
 {
-    public class InsertGenerator : IGenerator
+    public class InsertGenerator : ISqlGenerator
     {
         public string GenerateSql(object obj)
         {

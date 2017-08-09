@@ -14,7 +14,7 @@ namespace Guyusoft.IMS.Utility.UnitTests
             testClass.Description = "Test";
             testClass.Id = 2;
 
-            IGenerator generator = new UpdateGenerator();
+            ISqlGenerator generator = new UpdateGenerator();
 
             var sql = generator.GenerateSql(testClass);
 
