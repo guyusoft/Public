@@ -39,7 +39,6 @@
     <Compile Include="Exceptions\NoPublicPropertyException.cs" />
     <Compile Include="IComponent.cs" />
     <Compile Include="Models\BaseModel.cs" />
-    <Compile Include="Models\NavigationMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

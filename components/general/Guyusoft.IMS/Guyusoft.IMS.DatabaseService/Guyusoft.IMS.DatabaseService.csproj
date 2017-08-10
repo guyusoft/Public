@@ -37,10 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DbModelMapper.cs" />
-    <Compile Include="Service\BaseModelService.cs" />
+    <Compile Include="Service\ModelService.cs" />
     <Compile Include="SqlConnectionFactory.cs" />
-    <Compile Include="SqlGeneratorFactory.cs" />
-    <Compile Include="Service\NavigationMenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlExecutor.cs" />
   </ItemGroup>
@@ -56,13 +54,13 @@
       <Project>{5c60e15d-efc3-4f24-aef1-adae32a0564e}</Project>
       <Name>Guyusoft.IMS.DataContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS.Utility.DataContract\Guyusoft.IMS.Utility.DataContract.csproj">
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator.DataContract\Guyusoft.IMS.SqlGenerator.DataContract.csproj">
       <Project>{2b41d903-02f0-414b-92c6-f606d9b080a0}</Project>
-      <Name>Guyusoft.IMS.Utility.DataContract</Name>
+      <Name>Guyusoft.IMS.SqlGenerator.DataContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS.Utility\Guyusoft.IMS.Utility.csproj">
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator\Guyusoft.IMS.SqlGenerator.csproj">
       <Project>{1560a6dd-14e4-41b9-861d-5498d2f60da7}</Project>
-      <Name>Guyusoft.IMS.Utility</Name>
+      <Name>Guyusoft.IMS.SqlGenerator</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

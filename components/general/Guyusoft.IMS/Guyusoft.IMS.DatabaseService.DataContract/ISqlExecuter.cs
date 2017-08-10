@@ -4,8 +4,6 @@
     {
         int Execute(string sql);
 
-        T Get<T>(string sql);
-
-        T Insert<T>(string insertSql, string selectSql);
+        T Execute<T>(string sql);
     }
 }

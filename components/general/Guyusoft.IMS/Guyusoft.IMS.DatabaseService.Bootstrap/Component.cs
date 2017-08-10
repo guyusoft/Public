@@ -17,7 +17,7 @@ namespace Guyusoft.IMS.DatabaseService.Bootstrap
 
         public void Register()
         {
-            _container.RegisterType<IService<NavigationMenu>, NavigationMenuService>();
+            //_container.RegisterType<IService<NavigationMenu>, NavigationMenuService>();
             //_container.RegisterType<IGenerator, InsertGenerator>(SQLGenerationAction.Insert.ToString());
             //_container.RegisterType<IGenerator, UpdateGenerator>(SQLGenerationAction.Update.ToString());
             //_container.RegisterType<IGenerator, DeleteGenerator>(SQLGenerationAction.Delete.ToString());

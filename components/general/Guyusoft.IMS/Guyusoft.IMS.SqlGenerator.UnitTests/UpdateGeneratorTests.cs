@@ -1,8 +1,6 @@
-﻿using Guyusoft.IMS.Utility.DataContract.SQLGenerator;
-using Guyusoft.IMS.Utility.SQLGenerator;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace Guyusoft.IMS.Utility.UnitTests
+namespace Guyusoft.IMS.SqlGenerator.UnitTests
 {
     [TestFixture]
     public class UpdateGeneratorTests
@@ -14,9 +12,11 @@ namespace Guyusoft.IMS.Utility.UnitTests
             testClass.Description = "Test";
             testClass.Id = 2;
 
-            ISqlGenerator generator = new UpdateGenerator();
+            var schemaGenerator = new DbSchemaGenerator();
+            var dbFilter = new DbSchemaFilter();
+            var generator = new UpdateGenerator(schemaGenerator, dbFilter);
 
-            var sql = generator.GenerateSql(testClass);
+            var sql = generator.Get<TestClass>(testClass);
 
             Assert.AreEqual("UPDATE TestClass SET Description='Test' WHERE Id = 2", sql);
         }

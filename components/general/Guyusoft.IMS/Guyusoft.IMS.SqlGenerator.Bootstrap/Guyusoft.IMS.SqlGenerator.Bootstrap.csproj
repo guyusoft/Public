@@ -7,8 +7,8 @@
     <ProjectGuid>{B67A0F32-9708-4F5E-9D05-DC2FEB64E90D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Guyusoft.IMS.Utility.Bootstrap</RootNamespace>
-    <AssemblyName>Guyusoft.IMS.Utility.Bootstrap</AssemblyName>
+    <RootNamespace>Guyusoft.IMS.SqlGenerator.Bootstrap</RootNamespace>
+    <AssemblyName>Guyusoft.IMS.SqlGenerator.Bootstrap</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,17 +48,13 @@
       <Project>{5C60E15D-EFC3-4F24-AEF1-ADAE32A0564E}</Project>
       <Name>Guyusoft.IMS.DataContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS.Utility.DataContract\Guyusoft.IMS.Utility.DataContract.csproj">
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator.DataContract\Guyusoft.IMS.SqlGenerator.DataContract.csproj">
       <Project>{2b41d903-02f0-414b-92c6-f606d9b080a0}</Project>
-      <Name>Guyusoft.IMS.Utility.DataContract</Name>
+      <Name>Guyusoft.IMS.SqlGenerator.DataContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS.Utility\Guyusoft.IMS.Utility.csproj">
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator\Guyusoft.IMS.SqlGenerator.csproj">
       <Project>{1560a6dd-14e4-41b9-861d-5498d2f60da7}</Project>
-      <Name>Guyusoft.IMS.Utility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS\Guyusoft.IMS.csproj">
-      <Project>{88f8c6eb-7827-4612-8a44-f2c6b3736b8e}</Project>
-      <Name>Guyusoft.IMS</Name>
+      <Name>Guyusoft.IMS.SqlGenerator</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@
     {
         T Create(T t);
         T Update(T t);
-        bool Delete(T t);
+        bool Delete(int id);
         T Get(int id);
     }
 }

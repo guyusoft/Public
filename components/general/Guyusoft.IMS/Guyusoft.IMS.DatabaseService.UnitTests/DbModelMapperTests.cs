@@ -11,12 +11,12 @@ namespace Guyusoft.IMS.DatabaseService.UnitTests
         [Test]
         public void MapToTest()
         {
-            IDbModelMapper mapper = new DbModelMapper();
+            //IDbModelMapper mapper = new DbModelMapper();
 
-            var instance = mapper.MapTo<NavigationMenu>(BuildDataSet());
+            //var instance = mapper.MapTo<NavigationMenu>(BuildDataSet());
 
-            Assert.IsNotNull(instance);
-            Assert.AreEqual(1, instance.Id);
+            //Assert.IsNotNull(instance);
+            //Assert.AreEqual(1, instance.Id);
         }
 
         private DataSet BuildDataSet()
