@@ -1,4 +1,4 @@
-﻿using Guyusoft.IMS.DataContract.Models;
+﻿using Guyusoft.IMS.DataContract;
 using System.Data;
 
 namespace Guyusoft.IMS.DatabaseService.DataContract

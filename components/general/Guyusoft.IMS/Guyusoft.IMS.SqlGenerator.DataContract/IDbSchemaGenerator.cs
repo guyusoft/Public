@@ -12,5 +12,9 @@ namespace Guyusoft.IMS.SqlGenerator.DataContract
         string GetTableName(Type type);
 
         string GetKeyName(Type type);
+
+        T CreateInstance<T>();
+
+        void SetPropertyValue<T>(T t, string propertyName, object val);
     }
 }

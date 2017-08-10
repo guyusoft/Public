@@ -30,10 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>guyusoft.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,9 +48,6 @@
     <Compile Include="SqlGenerator\DeleteGenerator.cs" />
     <Compile Include="SqlGenerator\UpdateGenerator.cs" />
     <Compile Include="SqlGenerator\InsertGenerator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="guyusoft.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">

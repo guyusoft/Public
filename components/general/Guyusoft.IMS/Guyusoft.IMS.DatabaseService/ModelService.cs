@@ -20,7 +20,9 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.Get<T>(t);
 
-            return _executer.Execute<T>(sql);
+            var id = _executer.Execute(sql);
+
+            return Get(id);
         }
 
         public bool Delete(int id)
@@ -47,7 +49,9 @@ namespace Guyusoft.IMS.DatabaseService
 
             var sql = generator.Get<T>(t);
 
-            return _executer.Execute<T>(sql);
+            _executer.Execute(sql);
+
+            return t;
         }
     }
 }

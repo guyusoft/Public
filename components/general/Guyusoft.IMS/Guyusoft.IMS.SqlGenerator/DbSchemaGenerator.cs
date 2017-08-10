@@ -46,5 +46,15 @@ namespace Guyusoft.IMS.SqlGenerator
         {
             return type.GetProperties().AsEnumerable();
         }
+
+        public T CreateInstance<T>()
+        {
+            return (T)Assembly.GetAssembly(typeof(T)).CreateInstance(typeof(T).FullName);
+        }
+
+        public void SetPropertyValue<T>(T t, string propertyName, object val)
+        {
+            t.GetType().GetProperty(propertyName).SetValue(t, val, null);
+        }
     }
 }

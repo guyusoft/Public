@@ -7,7 +7,7 @@ namespace Guyusoft.IMS.SqlGenerator
     {
         private IDbSchemaGenerator _dbSchemaGenerator;
         private IFilter _dbSchemaFilter;
-        public SelectGenerator(DbSchemaGenerator dbSchemaGenerator, IFilter dbSchemaFilter)
+        public SelectGenerator(IDbSchemaGenerator dbSchemaGenerator, IFilter dbSchemaFilter)
         {
             _dbSchemaGenerator = dbSchemaGenerator;
             _dbSchemaFilter = dbSchemaFilter;
@@ -18,7 +18,6 @@ namespace Guyusoft.IMS.SqlGenerator
             Type type = typeof(T);
 
             var allFields = _dbSchemaGenerator.GetAllPublicFields(type);
-            allFields = _dbSchemaFilter.Filter(allFields);
 
             var sql = "SELECT " + string.Join(",", allFields) + " FROM " + _dbSchemaGenerator.GetTableName(type) + " WHERE " + _dbSchemaGenerator.GetKeyName(type) + " = " + obj;
 

@@ -20,7 +20,13 @@ namespace Guyusoft.IMS.DatabaseService
             {
                 var sqlCmd = new SqlCommand(sql, conn);
 
-                return sqlCmd.ExecuteNonQuery();
+                conn.Open();
+
+                var result = sqlCmd.ExecuteNonQuery();
+
+                conn.Close();
+
+                return result;
             }
         }
 

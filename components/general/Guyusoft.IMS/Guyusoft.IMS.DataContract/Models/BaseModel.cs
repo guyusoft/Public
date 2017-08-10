@@ -1,4 +1,4 @@
-﻿namespace Guyusoft.IMS.DataContract.Models
+﻿namespace Guyusoft.IMS.DataContract
 {
     public class BaseModel
     {

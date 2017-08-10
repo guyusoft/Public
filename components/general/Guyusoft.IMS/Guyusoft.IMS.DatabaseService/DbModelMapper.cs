@@ -15,13 +15,13 @@ namespace Guyusoft.IMS.DatabaseService
 
         public T MapTo<T>(DataSet ds)
         {
-            T t = (T)Assembly.GetAssembly(typeof(T)).CreateInstance(typeof(T).FullName);
+            T t = _generator.CreateInstance<T>();
 
             foreach (DataRow rowRecord in ds.Tables[0].Rows)
             {
                 foreach (var property in _generator.GetAllPublicFields(typeof(T)))
                 {
-                    t.GetType().GetProperty(property).SetValue(t, rowRecord[property], null);//TODO
+                    _generator.SetPropertyValue<T>(t, property, rowRecord[property]);
                 }
             }
 

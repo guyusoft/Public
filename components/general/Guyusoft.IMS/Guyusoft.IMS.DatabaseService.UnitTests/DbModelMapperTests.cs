@@ -1,5 +1,7 @@
 ﻿using Guyusoft.IMS.DatabaseService.DataContract;
-using Guyusoft.IMS.DataContract.Models;
+using Guyusoft.IMS.DataContract;
+using Guyusoft.IMS.SqlGenerator;
+using Guyusoft.IMS.SqlGenerator.DataContract;
 using NUnit.Framework;
 using System.Data;
 
@@ -11,12 +13,13 @@ namespace Guyusoft.IMS.DatabaseService.UnitTests
         [Test]
         public void MapToTest()
         {
-            //IDbModelMapper mapper = new DbModelMapper();
+            IDbSchemaGenerator _generator = new DbSchemaGenerator();
+            IDbModelMapper mapper = new DbModelMapper(_generator);
 
-            //var instance = mapper.MapTo<NavigationMenu>(BuildDataSet());
+            var instance = mapper.MapTo<NavigationMenu>(BuildDataSet());
 
-            //Assert.IsNotNull(instance);
-            //Assert.AreEqual(1, instance.Id);
+            Assert.IsNotNull(instance);
+            Assert.AreEqual(1, instance.Id);
         }
 
         private DataSet BuildDataSet()

@@ -26,10 +26,7 @@ namespace Guyusoft.IMS.SqlGenerator.Bootstrap
 
         private void RegisterFactory()
         {
-            var generator = _container.Resolve<IDbSchemaGenerator>();
-            var filter = _container.Resolve<IFilter>();
-
-            _container.RegisterType<ISqlGeneratorFactory, SqlGeneratorFactory>(new InjectionConstructor(generator, filter));
+            _container.RegisterType<ISqlGeneratorFactory, SqlGeneratorFactory>();
         }
     }
 }

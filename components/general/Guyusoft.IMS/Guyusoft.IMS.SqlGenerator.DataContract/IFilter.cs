@@ -4,6 +4,6 @@ namespace Guyusoft.IMS.SqlGenerator.DataContract
 {
     public interface IFilter
     {
-        IEnumerable<string> Filter(IEnumerable<string> source);
+        IEnumerable<string> Filter<T>(IEnumerable<string> source);
     }
 }

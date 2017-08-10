@@ -9,7 +9,7 @@ namespace Guyusoft.IMS.SqlGenerator.UnitTests
         public void SelectGeneratorTest()
         {
             var schemaGenerator = new DbSchemaGenerator();
-            var dbFilter = new DbSchemaFilter();
+            var dbFilter = new DbSchemaFilter(schemaGenerator);
             var selectGenerator = new SelectGenerator(schemaGenerator, dbFilter);
 
             var sql = selectGenerator.Get<TestClass>(2);
