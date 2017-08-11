@@ -40,6 +40,11 @@
     <Compile Include="Exceptions\NoPublicPropertyException.cs" />
     <Compile Include="IComponent.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\NewsCategory.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\UserDetail.cs" />
     <Compile Include="Models\NavigationMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

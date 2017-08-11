@@ -27,6 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseService", "Database
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guyusoft.IMS.DatabaseService.UnitTests", "Guyusoft.IMS.DatabaseService.UnitTests\Guyusoft.IMS.DatabaseService.UnitTests.csproj", "{A02948B1-28AB-4A1A-8CD9-73158E9AE15A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{539203FB-0471-4CBB-A326-2D94153DB028}"
+	ProjectSection(SolutionItems) = preProject
+		TableCreation.sql = TableCreation.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

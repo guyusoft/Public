@@ -14,7 +14,7 @@ namespace Guyusoft.IMS.SqlGenerator.UnitTests
 
             var sql = selectGenerator.Get<TestClass>(2);
 
-            Assert.AreEqual("SELECT Description FROM TestClass WHERE Id = 2", sql);
+            Assert.AreEqual("SELECT Id,Description FROM TestClass WHERE Id = 2", sql);
         }
     }
 }

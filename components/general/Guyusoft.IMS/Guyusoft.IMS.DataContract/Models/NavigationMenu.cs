@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Guyusoft.IMS.DataContract
+﻿namespace Guyusoft.IMS.DataContract
 {
     public class NavigationMenu: BaseModel
     {
