@@ -56,10 +56,6 @@
       <Project>{5C60E15D-EFC3-4F24-AEF1-ADAE32A0564E}</Project>
       <Name>Guyusoft.IMS.DataContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Guyusoft.IMS\Guyusoft.IMS.csproj">
-      <Project>{88f8c6eb-7827-4612-8a44-f2c6b3736b8e}</Project>
-      <Name>Guyusoft.IMS</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
