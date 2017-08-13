@@ -8,12 +8,10 @@ namespace Guyusoft.IMS.Web.Controllers
     public class HomeController : Controller
     {
         private IServiceExtension<NavigationMenu> _serviceExtension = null;
-        private IService<NavigationMenu> _service = null;
 
         public HomeController()
         {
             _serviceExtension = (IServiceExtension<NavigationMenu>)MvcApplication.Container.Resolve(typeof(IServiceExtension<NavigationMenu>), "");
-            _service = (IService<NavigationMenu>)_serviceExtension;
         }
 
         public ActionResult Index()
