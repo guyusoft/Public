@@ -6,11 +6,11 @@ namespace Guyusoft.IMS.Web.Controllers
 {
     public class NewsController : Controller
     {
-        private IServiceExtension<NavigationMenu> _serviceExtension = null;
+        private IServiceExtension<News> _serviceExtension = null;
 
         public NewsController()
         {
-            _serviceExtension = (IServiceExtension<NavigationMenu>)MvcApplication.Container.Resolve(typeof(IServiceExtension<NavigationMenu>), "");
+            _serviceExtension = (IServiceExtension<News>)MvcApplication.Container.Resolve(typeof(IServiceExtension<News>), "");
         }
 
         public ActionResult Index()
@@ -18,6 +18,11 @@ namespace Guyusoft.IMS.Web.Controllers
             var model = _serviceExtension.GetAll();
 
             return View(model);
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
         }
     }
 }

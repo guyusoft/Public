@@ -24,11 +24,7 @@ app.controller('newsController', ['$scope', 'ngDialog', function ($scope, ngDial
     };
 
     $scope.add = function (item) {
-        ngDialog.open({
-            template:'navigationMenuAddAndEdit',
-            className: 'ngdialog-theme-default',
-            data: item
-        });
+        window.location.href = "";
     };
 
 }]);
