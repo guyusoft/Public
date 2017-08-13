@@ -4,11 +4,11 @@ using System.Web.Mvc;
 
 namespace Guyusoft.IMS.Web.Controllers
 {
-    public class HomeController : Controller
+    public class NewsController : Controller
     {
         private IServiceExtension<NavigationMenu> _serviceExtension = null;
 
-        public HomeController()
+        public NewsController()
         {
             _serviceExtension = (IServiceExtension<NavigationMenu>)MvcApplication.Container.Resolve(typeof(IServiceExtension<NavigationMenu>), "");
         }
