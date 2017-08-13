@@ -1,6 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Newtonsoft.Json;
+<!DOCTYPE html>
 
-<html>
+<html data-ng-app="IMS">
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/styles/bootstrap.css" />
@@ -9,156 +10,14 @@
     <title>@ViewBag.Title</title>
 </head>
 <body class="wrapper">
+    <input type="hidden"  value="@JsonConvert.SerializeObject(Model)" id="dataModel"/>
+
     <nav role="navigation" class="navbar topnavbar">
-        <div class="navbar-header">
-            <a href="#/" class="navbar-brand">
-                <div class="brand-logo">
-                    <img src="images/logo.svg" class="img-responsive" />
-                </div>
-            </a>
-        </div>
-        <div class="nav-wrapper">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                        <em class="icon-magnifier"></em>
-                    </a>
-                </li>
-                <li class="dropdown dropdown-list">
-                    <a>
-                        <em class="icon-bell"></em>
-                        <div class="label label-danger">11</div>
-                    </a>
-                    <ul class="dropdown-menu animated flipInX">
-                        <li>
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <div class="media-box">
-                                        <div class="pull-left">
-                                            <em class="fa fa-twitter fa-2x text-info"></em>
-                                        </div>
-                                        <div class="media-box-body clearfix">
-                                            <p class="m0">New followers</p>
-                                            <p class="m0 text-muted">
-                                                <small>1 new follower</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <!-- list item-->
-                                <a href="#" class="list-group-item">
-                                    <div class="media-box">
-                                        <div class="pull-left">
-                                            <em class="fa fa-envelope fa-2x text-warning"></em>
-                                        </div>
-                                        <div class="media-box-body clearfix">
-                                            <p class="m0">New e-mails</p>
-                                            <p class="m0 text-muted">
-                                                <small>You have 10 new emails</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <!-- list item-->
-                                <a href="#" class="list-group-item">
-                                    <div class="media-box">
-                                        <div class="pull-left">
-                                            <em class="fa fa-tasks fa-2x text-success"></em>
-                                        </div>
-                                        <div class="media-box-body clearfix">
-                                            <p class="m0">Pending Tasks</p>
-                                            <p class="m0 text-muted">
-                                                <small>11 pending task</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <!-- last list item -->
-                                <a href="#" class="list-group-item">
-                                    <small translate="topbar.notification.MORE">More notifications</small>
-                                    <span class="label label-danger pull-right">14</span>
-                                </a>
-                            </div>
-                            <!-- END list group-->
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <em class="icon-notebook"></em>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        @Html.Partial("~/Views/Partial/_navigation.cshtml")
     </nav>
 
     <aside class="aside">
-        <div class="aside-inner">
-            <nav class="sidebar">
-                <ul class="nav ">
-                    <li class=" nav-heading">
-                        <span class="ng-binding ">Main Navigation</span>
-                    </li>
-                    <li class="">
-                        <a title="Dashboard" class="">
-                            <em class="icon-speedometer"></em>
-                            <div class="pull-right ng-binding  label label-info">3</div>
-                            <span class="ng-binding">Dashboard</span></a>
-                        <ul class="nav sidebar-subnav  collapse" style="height: 0px;">
-                            <li class="sidebar-subnav-header ng-binding">Dashboard</li>
-                            <li class="">
-                                <a title="Dashboard v1" class="" href="#">
-                                    <span class="ng-binding">Dashboard v1</span></a>
-                            </li>
-                            <li class="">
-                                <a title="Dashboard v2" class="" href="#">
-                                    <span class="ng-binding">Dashboard v2</span></a>
-                            </li>
-                            <li class="">
-                                <a title="Dashboard v3" class="" href="#">
-                                    <span class="ng-binding">Dashboard v3</span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="">
-                        <a title="Documentation" class="" href="#">
-                            <em class="icon-graduation"></em>
-                            <span class="ng-binding">Documentation</span></a>
-                    </li>
-                    <li class=" nav-heading">
-                        <span class="ng-binding ">Main Navigation</span>
-                    </li>
-                    <li class="">
-                        <a title="Dashboard" class="">
-                            <em class="icon-speedometer"></em>
-                            <div class="pull-right ng-binding  label label-info">3</div>
-                            <span class="ng-binding">Dashboard</span></a>
-                        <ul class="nav sidebar-subnav  collapse" style="height: 0px;">
-                            <li class="sidebar-subnav-header ng-binding">Dashboard</li>
-                            <li class="">
-                                <a title="Dashboard v1" class="" href="#">
-                                    <span class="ng-binding">Dashboard v1</span></a>
-                            </li>
-                            <li class="">
-                                <a title="Dashboard v2" class="" href="#">
-                                    <span class="ng-binding">Dashboard v2</span></a>
-                            </li>
-                            <li class="">
-                                <a title="Dashboard v3" class="" href="#">
-                                    <span class="ng-binding">Dashboard v3</span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="">
-                        <a title="Documentation" class="" href="#">
-                            <em class="icon-graduation"></em>
-                            <span class="ng-binding">Documentation</span></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        @Html.Partial("~/Views/Partial/_aside.cshtml")
     </aside>
 
     @RenderBody()
@@ -166,5 +25,7 @@
     <footer class=""><span class="ng-binding">© 2017 - Guyusoft.com</span></footer>
 
     <script src="~/scripts/angular1.6.5.min.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/scripts/guyusoft.js" type="text/javascript"></script>
 </body>
 </html>

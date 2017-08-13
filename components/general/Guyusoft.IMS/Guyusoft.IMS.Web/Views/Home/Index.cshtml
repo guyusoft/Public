@@ -4,7 +4,7 @@
 }
 
 <link rel="stylesheet" href="~/styles/jquery.dataTables.css" />
-<section>
+<section ng-controller="navigationMenuController">
     <div class="content-wrapper ng-scope ng-fadeInUp">
         <h3>Orders</h3>
         <div class="table-responsive b0 ng-scope">
@@ -12,11 +12,10 @@
                 <div class="dataTables_length">
                     <label>
                         每页显示
-                        <select class="">
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
+                        <select>
+                            <option ng-repeat="opt in pageOptions" value="{{opt}}">
+                                {{opt}}
+                            </option>
                         </select>
                     </label>
                 </div>
@@ -26,34 +25,25 @@
                 <table class="table table-hover ng-isolate-scope dataTable no-footer" style="display: table;" role="grid">
                     <thead>
                         <tr role="row">
-                            <th style="width: 80px" class="sorting_asc" tabindex="0" rowspan="1" colspan="1">
-                                <strong>ORDER ID</strong>
-                            </th>
-                            <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 150px;">
-                                <strong>PURCHASED ON</strong>
-                            </th>
-                            <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 145px;">
-                                <strong>CLIENT NAME</strong>
-                            </th>
-                            <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 91px;">
-                                <strong>AMOUNT</strong>
-                            </th>
-                            <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 102px;">
-                                <strong>QUANTITY</strong>
-                            </th>
-                            <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 102px;">
-                                <strong>SHIPMENT</strong>
-                            </th>
-                            <th class="text-center sorting" tabindex="0" rowspan="1" colspan="1" style="width: 76px;">
-                                <strong>STATUS</strong>
-                            </th>
-                            <th class="text-center sorting" tabindex="0" rowspan="1" colspan="1" style="width: 155px;">
-                                <strong>VIEW</strong>
+                            <th style="width: 120px" tabindex="0" rowspan="1" colspan="1" ng-repeat="colDef in columnDefinition">
+                                <strong>{{colDef}}</strong>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr role="row" class="odd">
+                        <tr role="row" class="odd" ng-repeat="menuItem in menuItems">
+                            <td class="sorting_1">{{menuItem.Text}}</td>
+                            <td>{{menuItem.Href}}</td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-sm btn-default" ng-click="delete(menuItem.Id)">
+                                    <em class="icon-close"></em>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-default" ng-click="edit(menuItem.Id)">
+                                    <em class="icon-note"></em>
+                                </button>
+                            </td>
+                        </tr>
+                        @*<tr role="row" class="odd">
                             <td class="sorting_1">0001</td>
                             <td>03/11/2015</td>
                             <td>Addison Nichols</td>
@@ -71,140 +61,7 @@
                                     <em class="icon-note"></em>
                                 </button>
                             </td>
-                        </tr>
-                        <tr role="row" class="even">
-                            <td class="sorting_1">0002</td>
-                            <td>05/11/2015</td>
-                            <td>Albert Watkins</td>
-                            <td>$ 22.30</td>
-                            <td>122</td>
-                            <td>06/10/2015</td>
-                            <td class="text-center">
-                                <span class="label label-success">Paid</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="odd">
-                            <td class="sorting_1">0003</td>
-                            <td>07/09/2015</td>
-                            <td>Johnny Fernandez</td>
-                            <td>$ 31.4</td>
-                            <td>68</td>
-                            <td>28/09/2015</td>
-                            <td class="text-center">
-                                <span class="label label-info">Standby</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="even">
-                            <td class="sorting_1">0004</td>
-                            <td>09/09/2015</td>
-                            <td>Chloe Rodriquez</td>
-                            <td>$ 4.55</td>
-                            <td>21</td>
-                            <td>10/10/2015</td>
-                            <td class="text-center">
-                                <span class="label label-purple">Shipped</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="odd">
-                            <td class="sorting_1">0005</td>
-                            <td>01/09/2015</td>
-                            <td>Stanley Austin</td>
-                            <td>$ 55.6</td>
-                            <td>57</td>
-                            <td>-</td>
-                            <td class="text-center">
-                                <span class="label label-purple">Shipped</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="even">
-                            <td class="sorting_1">0006</td>
-                            <td>212/08/2015</td>
-                            <td>Ethel Torres</td>
-                            <td>$ 62.7</td>
-                            <td>115</td>
-                            <td>13/11/2015</td>
-                            <td class="text-center">
-                                <span class="label label-success">Paid</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="odd">
-                            <td class="sorting_1">0007</td>
-                            <td>24/08/2015</td>
-                            <td>Ronnie Nelson</td>
-                            <td>$ 78.8</td>
-                            <td>154</td>
-                            <td>-</td>
-                            <td class="text-center">
-                                <span class="label label-danger">Rejected</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr role="row" class="even">
-                            <td class="sorting_1">0008</td>
-                            <td>25/08/2015</td>
-                            <td>Stanley Olson</td>
-                            <td>$ 85.9</td>
-                            <td>74</td>
-                            <td>-</td>
-                            <td class="text-center">
-                                <span class="label label-info">Standby</span>
-                            </td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
+                        </tr>*@
                     </tbody>
                 </table>
                 <div class="panel-footer">
@@ -212,7 +69,7 @@
                         <div class="col-lg-4 action">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <button type="button" class="btn btn-sm btn-primary">新增</button>
+                                    <button type="button" class="btn btn-sm btn-primary" ng-click="add()">新增</button>
                                 </span>
                             </div>
                         </div>
