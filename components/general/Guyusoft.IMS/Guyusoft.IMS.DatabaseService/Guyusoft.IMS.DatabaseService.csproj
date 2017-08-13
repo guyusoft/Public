@@ -37,6 +37,8 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SqlExecutorExtension.cs" />
+    <Compile Include="ModelServiceExtension.cs" />
     <Compile Include="DbModelMapper.cs" />
     <Compile Include="ModelService.cs" />
     <Compile Include="SqlConnectionFactory.cs" />

@@ -17,7 +17,7 @@ namespace Guyusoft.IMS.SqlGenerator
         {
             if (generatorType == Generator.Select)
             {
-                return new SelectGenerator(_schemaGenerator, _dbSchemaFilter);
+                return new SelectGenerator(_schemaGenerator);
             }
             if (generatorType == Generator.Delete)
             {
@@ -26,6 +26,10 @@ namespace Guyusoft.IMS.SqlGenerator
             if (generatorType == Generator.Insert)
             {
                 return new InsertGenerator(_schemaGenerator, _dbSchemaFilter);
+            }
+            if (generatorType == Generator.GetAll)
+            {
+                return new GetAllGenerator(_schemaGenerator);
             }
 
             return new UpdateGenerator(_schemaGenerator, _dbSchemaFilter);

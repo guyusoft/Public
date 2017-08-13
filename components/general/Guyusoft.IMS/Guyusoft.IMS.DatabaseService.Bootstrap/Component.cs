@@ -16,7 +16,15 @@ namespace Guyusoft.IMS.DatabaseService.Bootstrap
         public void Register()
         {
             _container.RegisterType<ISqlExecuter, SqlExecutor>();
+            _container.RegisterType<ISqlExecuterExtension, SqlExecutorExtension>();
             _container.RegisterType<IDbModelMapper, DbModelMapper>();
+            RegisterService();
+        }
+
+        private void RegisterService()
+        {
+            _container.RegisterType<IService<NavigationMenu>, ModelService<NavigationMenu>>();
+            _container.RegisterType<IServiceExtension<NavigationMenu>, ModelServiceExtension<NavigationMenu>>();
         }
     }
 }

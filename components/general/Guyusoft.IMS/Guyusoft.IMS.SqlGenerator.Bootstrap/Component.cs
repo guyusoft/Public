@@ -16,6 +16,7 @@ namespace Guyusoft.IMS.SqlGenerator.Bootstrap
         public void Register()
         {
             RegisterSchema();
+            RegisterFactory();
         }
 
         private void RegisterSchema()

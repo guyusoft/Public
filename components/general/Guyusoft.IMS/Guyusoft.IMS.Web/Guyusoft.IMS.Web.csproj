@@ -40,6 +40,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -108,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RegisterComponent.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -118,8 +139,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\angular2-13.min.js" />
+    <Content Include="images\logo.svg" />
+    <Content Include="images\sort_asc.png" />
+    <Content Include="images\sort_both.png" />
+    <Content Include="images\sort_desc.png" />
+    <Content Include="scripts\angular1.6.5.min.js" />
+    <Content Include="scripts\guyusoft.js" />
+    <Content Include="styles\bootstrap.css" />
+    <Content Include="styles\guyusoft.css" />
+    <Content Include="styles\jquery.dataTables.css" />
+    <Content Include="styles\simple-line-icons.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -130,9 +161,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
     <Folder Include="Models\" />
-    <Folder Include="styles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -142,6 +171,41 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Guyusoft.IMS.DatabaseService.Bootstrap\Guyusoft.IMS.DatabaseService.Bootstrap.csproj">
+      <Project>{fcf4dde4-5bb8-47d0-84c8-ce84218c03c0}</Project>
+      <Name>Guyusoft.IMS.DatabaseService.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DatabaseService.DataContract\Guyusoft.IMS.DatabaseService.DataContract.csproj">
+      <Project>{ac5cc5b5-d997-419e-8598-667698391e83}</Project>
+      <Name>Guyusoft.IMS.DatabaseService.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DatabaseService\Guyusoft.IMS.DatabaseService.csproj">
+      <Project>{a99e59b5-aeb0-4a8a-961a-6055c332ec8b}</Project>
+      <Name>Guyusoft.IMS.DatabaseService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.DataContract\Guyusoft.IMS.DataContract.csproj">
+      <Project>{5c60e15d-efc3-4f24-aef1-adae32a0564e}</Project>
+      <Name>Guyusoft.IMS.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator.Bootstrap\Guyusoft.IMS.SqlGenerator.Bootstrap.csproj">
+      <Project>{b67a0f32-9708-4f5e-9d05-dc2feb64e90d}</Project>
+      <Name>Guyusoft.IMS.SqlGenerator.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator.DataContract\Guyusoft.IMS.SqlGenerator.DataContract.csproj">
+      <Project>{2b41d903-02f0-414b-92c6-f606d9b080a0}</Project>
+      <Name>Guyusoft.IMS.SqlGenerator.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Guyusoft.IMS.SqlGenerator\Guyusoft.IMS.SqlGenerator.csproj">
+      <Project>{1560a6dd-14e4-41b9-861d-5498d2f60da7}</Project>
+      <Name>Guyusoft.IMS.SqlGenerator</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

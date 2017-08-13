@@ -3,10 +3,10 @@ using System;
 
 namespace Guyusoft.IMS.SqlGenerator
 {
-    public class SelectGenerator : ISqlGenerator
+    public class GetAllGenerator : ISqlGenerator
     {
         private IDbSchemaGenerator _dbSchemaGenerator;
-        public SelectGenerator(IDbSchemaGenerator dbSchemaGenerator)
+        public GetAllGenerator(IDbSchemaGenerator dbSchemaGenerator)
         {
             _dbSchemaGenerator = dbSchemaGenerator;
         }
@@ -17,7 +17,7 @@ namespace Guyusoft.IMS.SqlGenerator
 
             var allFields = _dbSchemaGenerator.GetAllPublicFields(type);
 
-            var sql = "SELECT " + string.Join(",", allFields) + " FROM " + _dbSchemaGenerator.GetTableName(type) + " WHERE " + _dbSchemaGenerator.GetKeyName(type) + " = " + obj;
+            var sql = "SELECT " + string.Join(",", allFields) + " FROM " + _dbSchemaGenerator.GetTableName(type);
 
             return sql;
         }

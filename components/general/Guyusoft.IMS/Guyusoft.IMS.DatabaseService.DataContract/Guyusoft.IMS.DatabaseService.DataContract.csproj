@@ -37,8 +37,10 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ISqlExecuterExtension.cs" />
     <Compile Include="IDbModelMapper.cs" />
     <Compile Include="IService.cs" />
+    <Compile Include="IServiceExtension.cs" />
     <Compile Include="ISqlExecuter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
