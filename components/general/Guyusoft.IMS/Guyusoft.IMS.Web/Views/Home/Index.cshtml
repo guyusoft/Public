@@ -3,7 +3,8 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<link rel="stylesheet" href="~/styles/jquery.dataTables.css" />
+<link rel="stylesheet" href="~/styles/ngDialog.min.css" />
+<link rel="stylesheet" href="~/styles/ngDialog-theme-default.min.css" />
 <section ng-controller="navigationMenuController">
     <div class="content-wrapper ng-scope ng-fadeInUp">
         <h3>Orders</h3>
@@ -13,8 +14,7 @@
                     <label>
                         每页显示
                         <select>
-                            <option ng-repeat="opt in pageOptions" value="{{opt}}">
-                                {{opt}}
+                            <option ng-repeat="opt in pageOptions" value="{{opt}}">{{opt}}
                             </option>
                         </select>
                     </label>
@@ -89,3 +89,9 @@
         </div>
     </div>
 </section>
+
+@section Script{
+    <script src="~/scripts/ngDialog.min.js" type="text/javascript"></script>
+    <script src="~/scripts/navigationMenu.js" type="text/javascript"></script>
+}
+

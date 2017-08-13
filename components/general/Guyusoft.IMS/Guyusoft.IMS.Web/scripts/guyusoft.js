@@ -1,4 +1,4 @@
-﻿var app = angular.module('IMS', []);
+﻿var app = angular.module('IMS', ['ngDialog']);
 
 app.run(["$rootScope", function ($rootScope) {
     $rootScope.leftNavigation = [];
@@ -9,7 +9,7 @@ app.run(["$rootScope", function ($rootScope) {
         subItems: [
             {
                 text: "导航菜单",
-                href:"Home/Index"
+                href: "Home/Index"
             },
             {
                 text: "用户管理",
@@ -27,24 +27,4 @@ app.run(["$rootScope", function ($rootScope) {
     });
 
     $rootScope.pageOptions = [1, 2, 5, 10, 20, 50, 100];
-}]);
-
-app.controller('navigationMenuController', ['$scope', function ($scope) {
-
-    $scope.columnDefinition = ["链接标题", "链接地址","操作"];
-
-    $scope.menuItems = JSON.parse($('#dataModel').val());
-
-    $scope.delete = function (id) {
-        
-    };
-
-    $scope.edit = function (id) {
-
-    };
-
-    $scope.add = function (id) {
-
-    };
-
 }]);

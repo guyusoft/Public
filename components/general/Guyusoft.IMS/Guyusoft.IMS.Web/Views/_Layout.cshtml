@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/styles/bootstrap.css" />
     <link rel="stylesheet" href="~/styles/guyusoft.css" />
     <link rel="stylesheet" href="~/styles/simple-line-icons.css" />
+    <link rel="stylesheet" href="~/styles/jquery.dataTables.css" />
     <title>@ViewBag.Title</title>
 </head>
 <body class="wrapper">
@@ -27,5 +28,7 @@
     <script src="~/scripts/angular1.6.5.min.js" type="text/javascript"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="~/scripts/guyusoft.js" type="text/javascript"></script>
+
+    @RenderSection("Script")
 </body>
 </html>

@@ -203,6 +203,10 @@ now {
     border-top-width: 3px;
 }
 
+.panel.panel-default.dialog {
+    border:none;
+}
+
 .well {
     border: 1px solid #dde6e9;
 }
