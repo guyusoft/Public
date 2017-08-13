@@ -140,6 +140,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\Simple-Line-Icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.svg" />
@@ -150,8 +151,10 @@
     <Content Include="scripts\news.js" />
     <Content Include="scripts\guyusoft.js" />
     <Content Include="scripts\navigationMenu.js" />
+    <Content Include="scripts\ng-wig.min.js" />
     <Content Include="scripts\ngDialog.min.js" />
     <Content Include="styles\bootstrap.css" />
+    <Content Include="styles\font-awesome.min.css" />
     <Content Include="styles\guyusoft.css" />
     <Content Include="styles\jquery.dataTables.css" />
     <Content Include="styles\ngDialog-theme-default.min.css" />
@@ -221,6 +224,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\News\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
