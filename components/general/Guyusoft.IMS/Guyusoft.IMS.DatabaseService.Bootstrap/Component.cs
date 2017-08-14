@@ -23,10 +23,8 @@ namespace Guyusoft.IMS.DatabaseService.Bootstrap
 
         private void RegisterService()
         {
-            _container.RegisterType<IService<NavigationMenu>, ModelService<NavigationMenu>>();
             _container.RegisterType<IServiceExtension<NavigationMenu>, ModelServiceExtension<NavigationMenu>>();
 
-            _container.RegisterType<IService<News>, ModelService<News>>();
             _container.RegisterType<IServiceExtension<News>, ModelServiceExtension<News>>();
         }
     }
