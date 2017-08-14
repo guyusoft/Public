@@ -32,7 +32,7 @@ namespace Guyusoft.IMS.SqlGenerator
 
             setString = setString.Substring(0, setString.Length - 1);
 
-            var sql = "UPDATE " + _dbSchemaGenerator.GetTableName(type) + " SET " + setString + " WHERE " + keyName + " = " + fieldValuePair[keyName];
+            var sql = "UPDATE " + _dbSchemaGenerator.GetTableName(type) + " SET " + setString + " WHERE " + keyName + " = " + fieldValuePair[keyName] + ";SELECT @@ROWCOUNT";
 
             return sql;
         }

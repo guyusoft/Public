@@ -13,11 +13,43 @@ namespace Guyusoft.IMS.Web.Controllers
             _serviceExtension = (IServiceExtension<NavigationMenu>)MvcApplication.Container.Resolve(typeof(IServiceExtension<NavigationMenu>), "");
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             var model = _serviceExtension.GetAll();
 
             return View(model);
+        }
+
+        [HttpPost]
+        public JsonResult Edit(NavigationMenu menuItem)
+        {
+            if (menuItem.Id > 0)
+            {
+                menuItem = _serviceExtension.Update(menuItem);
+            }
+            else
+            {
+                menuItem = _serviceExtension.Create(menuItem);
+            }
+
+            var result = new JsonResult();
+
+            result.Data = menuItem;
+
+            return result;
+        }
+
+        [HttpPost]
+        public JsonResult Delete(NavigationMenu menuItem)
+        {
+            var deleteRes = _serviceExtension.Delete(menuItem.Id);
+
+            var result = new JsonResult();
+
+            result.Data = deleteRes;
+
+            return result;
         }
     }
 }

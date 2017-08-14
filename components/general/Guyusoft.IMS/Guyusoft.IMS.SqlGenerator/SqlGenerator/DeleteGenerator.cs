@@ -18,7 +18,7 @@ namespace Guyusoft.IMS.SqlGenerator
             var tabelName = _dbSchemaGenerator.GetTableName(type);
             var keyName = _dbSchemaGenerator.GetKeyName(type);
 
-            return "DELETE FROM " + tabelName + " WHERE " + keyName + " = " + obj;
+            return "DELETE FROM " + tabelName + " WHERE " + keyName + " = " + obj + ";SELECT @@ROWCOUNT";
         }
     }
 }

@@ -22,11 +22,11 @@ namespace Guyusoft.IMS.DatabaseService
 
                 conn.Open();
 
-                var result = sqlCmd.ExecuteNonQuery();
+                var result = sqlCmd.ExecuteScalar();
 
                 conn.Close();
 
-                return result;
+                return int.Parse(result.ToString());
             }
         }
 
