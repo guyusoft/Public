@@ -3229,7 +3229,9 @@
 			);
 		}
 	
-		$(nodes).html( out );
+		//$(nodes).html('<button type="button" class="btn btn-sm btn-primary" onclick="add()">新增</button>');
+		//$(nodes).html(out);
+
 	}
 	
 	
@@ -9851,7 +9853,7 @@
 		 *      } );
 		 *    } );
 		 */
-		"aLengthMenu": [ 10, 25, 50, 100 ],
+		"aLengthMenu": [ 1, 2, 5, 10,20,25 ],
 	
 	
 		/**
@@ -11028,7 +11030,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+				"sFirst": "第一页",
 	
 	
 				/**
@@ -11051,7 +11053,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+				"sLast": "末页",
 	
 	
 				/**
@@ -11074,7 +11076,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "下一页",
 	
 	
 				/**
@@ -11097,7 +11099,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "前一页"
 			},
 	
 			/**
@@ -11120,7 +11122,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "没有任何数据可以显示",
 	
 	
 			/**
@@ -11313,7 +11315,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "每页显示 _MENU_ 条数据",
 	
 	
 			/**
@@ -11337,7 +11339,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLoadingRecords": "Loading...",
+			"sLoadingRecords": "加载中...",
 	
 	
 			/**
@@ -11358,7 +11360,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sProcessing": "Processing...",
+			"sProcessing": "处理中...",
 	
 	
 			/**
@@ -11393,7 +11395,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "搜索:",
 	
 	
 			/**
@@ -11451,7 +11453,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": "未匹配任何数据"
 		},
 	
 	

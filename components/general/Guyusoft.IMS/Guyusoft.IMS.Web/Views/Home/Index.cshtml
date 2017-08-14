@@ -33,67 +33,33 @@
 
 <section ng-controller="navigationMenuController">
     <div class="content-wrapper ng-scope ng-fadeInUp">
-        <h3>Orders</h3>
-        <div class="table-responsive b0 ng-scope">
-            <div class="dataTables_wrapper no-footer">
-                <div class="dataTables_length">
-                    <label>
-                        每页显示
-                        <select>
-                            <option ng-repeat="opt in pageOptions" value="{{opt}}">{{opt}}
-                            </option>
-                        </select>
-                    </label>
-                </div>
-                <div class="dataTables_filter">
-                    <label>搜索:<input type="search" class="" placeholder=""></label>
-                </div>
-                <table datatable="" class="table table-hover ng-isolate-scope dataTable no-footer" style="display: table;" role="grid">
-                    <thead>
-                        <tr role="row">
-                            <th style="width: 120px" tabindex="0" rowspan="1" colspan="1" ng-repeat="colDef in columnDefinition">
-                                <strong>{{colDef}}</strong>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr role="row" class="odd" ng-repeat="menuItem in menuItems">
-                            <td class="sorting_1">{{menuItem.Text}}</td>
-                            <td>{{menuItem.Href}}</td>
-                            <td class="text-center">
-                                <button type="button" class="btn btn-sm btn-default" ng-click="delete(menuItem)">
-                                    <em class="icon-close"></em>
-                                </button>
-                                <button type="button" class="btn btn-sm btn-default" ng-click="edit(menuItem)">
-                                    <em class="icon-note"></em>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-lg-4 action">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-sm btn-primary" ng-click="add()">新增</button>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="dataTables_paginate paging_simple_numbers">
-                                <a class="paginate_button previous disabled" tabindex="0">Previous</a>
-                                <span>
-                                    <a class="paginate_button current" data-dt-idx="1" tabindex="0">1</a>
-                                    <a class="paginate_button " data-dt-idx="2" tabindex="0">2</a>
-                                </span>
-                                <a class="paginate_button next" data-dt-idx="3" tabindex="0">Next</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h3>首页导航菜单
+            <button type="button" class="btn btn-sm btn-primary" ng-click="add()">新增</button>
+        </h3>
+
+        <table datatable="ng" class="row-border hover">
+            <thead>
+                <tr role="row">
+                    <th style="width: 120px" tabindex="0" rowspan="1" colspan="1" ng-repeat="colDef in columnDefinition">
+                        <strong>{{colDef}}</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr role="row" class="odd" ng-repeat="menuItem in menuItems">
+                    <td class="sorting_1">{{menuItem.Text}}</td>
+                    <td>{{menuItem.Href}}</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-sm btn-danger" ng-click="delete(menuItem)">
+                            <em class="icon-close"></em>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-warning" ng-click="edit(menuItem)">
+                            <em class="icon-note"></em>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 

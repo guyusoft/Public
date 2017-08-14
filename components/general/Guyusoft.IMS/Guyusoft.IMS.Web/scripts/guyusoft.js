@@ -1,4 +1,4 @@
-﻿var app = angular.module('IMS', ['ngDialog']);
+﻿var app = angular.module('IMS', ['ngDialog', 'datatables']);
 
 app.run(["$rootScope", function ($rootScope) {
     $rootScope.leftNavigation = [];
