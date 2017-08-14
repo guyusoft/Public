@@ -2,58 +2,171 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/_Layout.cshtml";
 }
+
 <link rel="stylesheet" href="~/styles/font-awesome.min.css" />
-<section ng-controller="newsController">
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Angular Simple wysiwyg</label>
-        <div class="col-sm-10">
-            <script type="text/ng-template" id="ng-wig/views/ng-wig.html">
-                <div class="ng-wig">
-                    <div class="btn-group btn-group-sm wd-wide">
-                        <button type="button" title="Header" ng-click="execCommand('formatblock', '&lt;h1&gt;')" class="btn btn-sm btn-default">
-                            <em class="fa fa-header"></em>
-                        </button>
-                        <button type="button" title="Paragraph" ng-click="execCommand('formatblock', '&lt;p&gt;')" class="btn btn-sm btn-default">
-                            <em class="fa fa-paragraph"></em>
-                        </button>
-                        <button type="button" title="Unordered List" ng-click="execCommand('insertunorderedlist')" class="btn btn-sm btn-default">
-                            <em class="fa fa-list-ul"></em>
-                        </button>
-                        <button type="button" title="Ordered List" ng-click="execCommand('insertorderedlist')" class="btn btn-sm btn-default">
-                            <em class="fa fa-list-ol"></em>
-                        </button>
-                        <button type="button" title="Bold" ng-click="execCommand('bold')" class="btn btn-sm btn-default">
-                            <em class="fa fa-bold"></em>
-                        </button>
-                        <button type="button" title="Italic" ng-click="execCommand('italic')" class="btn btn-sm btn-default">
-                            <em class="fa fa-italic"></em>
-                        </button>
-                        <button type="button" title="link" ng-click="execCommand('createlink')" class="btn btn-sm btn-default">
-                            <em class="fa fa-link"></em>
-                        </button>
-                        <button type="button" title="Edit Html" ng-class="{ 'nw-button--active': editMode }" ng-click="toggleEditMode()" class="pull-right btn btn-sm btn-default">
-                            <em class="fa fa-pencil"></em>
-                        </button>
-                    </div>
-                    <div class="nw-editor">
-                        <textarea ng-show="editMode" ng-model="content" class="nw-editor__src"> </textarea>
-                        <iframe scrolling="{{ autoexpand ? 'no' : 'yes' }}" frameBorder="0" ng-hide="editMode" ng-model="content" ng-wig-editable="" class="nw-editor__res"></iframe>
-                    </div>
+<link rel="stylesheet" href="~/plugins/text-angular/textAngular.css" />
+
+<section ng-controller="newsEditController">
+    <div class="panel-body">
+        <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="" class="ng-pristine ng-valid">
+                        <input type="text" name="article-title" placeholder="新闻标题" class="mb-lg form-control input-lg">
+                        <div ng-app="textAngularditor" ng-controller="wysiwygeditor" class="container app">
+                            <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+                        </div>
+                        <br>
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <button type="button" class="btn btn-default m-r-10 m-t-10">
+                                    <em class="fa fa-edit fa-fw"></em>取消
+                                </button>
+                                <button type="button" class="btn btn-primary m-t-10">
+                                    <em class="fa fa-check fa-fw"></em>保存
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </script>
-            <div class="ng-wig ng-isolate-scope" ng-wig="wysiwygContent">
-                <div class="btn-group btn-group-sm wd-wide">
-                    <button type="button" title="Header" ng-click="execCommand('formatblock', '<h1>')" class="btn btn-sm btn-default"><em class="fa fa-header"></em></button>
-                    <button type="button" title="Paragraph" ng-click="execCommand('formatblock', '<p>')" class="btn btn-sm btn-default"><em class="fa fa-paragraph"></em></button>
-                    <button type="button" title="Unordered List" ng-click="execCommand('insertunorderedlist')" class="btn btn-sm btn-default"><em class="fa fa-list-ul"></em></button>
-                    <button type="button" title="Ordered List" ng-click="execCommand('insertorderedlist')" class="btn btn-sm btn-default"><em class="fa fa-list-ol"></em></button>
-                    <button type="button" title="Bold" ng-click="execCommand('bold')" class="btn btn-sm btn-default"><em class="fa fa-bold"></em></button>
-                    <button type="button" title="Italic" ng-click="execCommand('italic')" class="btn btn-sm btn-default"><em class="fa fa-italic"></em></button>
-                    <button type="button" title="link" ng-click="execCommand('createlink')" class="btn btn-sm btn-default"><em class="fa fa-link"></em></button>
-                    <button type="button" title="Edit Html" ng-class="{ 'nw-button--active': editMode }" ng-click="toggleEditMode()" class="pull-right btn btn-sm btn-default"><em class="fa fa-pencil"></em></button>
+            </div>
+            <p class="lead">新闻反馈</p>
+            <div class="panel">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <strong>Comment ID</strong>
+                                </th>
+                                <th>
+                                    <strong>Date</strong>
+                                </th>
+                                <th>
+                                    <strong>Username</strong>
+                                </th>
+                                <th>
+                                    <strong>Comment excerpt</strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>Current status</strong>
+                                </th>
+                                <th style="width:130px" class="text-right">
+                                    <strong>Actions</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123</td>
+                                <td>10/05/2015</td>
+                                <td>
+                                    <a href="">Jack Jordan</a>
+                                </td>
+                                <td>Sed quis eros libero, a euismod nisl....</td>
+                                <td class="text-center">
+                                    <span class="label label-success">Approved</span>
+                                </td>
+                                <td class="text-right">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <em class="fa fa-pencil"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <em class="fa fa-trash"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-success">
+                                        <em class="fa fa-check"></em>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>456</td>
+                                <td>10/07/2015</td>
+                                <td>
+                                    <a href="">Hailey Mckinney</a>
+                                </td>
+                                <td>Nulla facilisi.</td>
+                                <td class="text-center">
+                                    <span class="label label-success">Approved</span>
+                                </td>
+                                <td class="text-right">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <em class="fa fa-pencil"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <em class="fa fa-trash"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-success">
+                                        <em class="fa fa-check"></em>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>789</td>
+                                <td>11/05/2015</td>
+                                <td>
+                                    <a href="">Peyton Reyes</a>
+                                </td>
+                                <td>Quisque enim nisi, semper non pulvinar et, aliquam id lorem...</td>
+                                <td class="text-center">
+                                    <span class="label label-warning">Pending</span>
+                                </td>
+                                <td class="text-right">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <em class="fa fa-pencil"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <em class="fa fa-trash"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-success">
+                                        <em class="fa fa-check"></em>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>999</td>
+                                <td>10/06/2015</td>
+                                <td>
+                                    <a href="">Darryl Harper</a>
+                                </td>
+                                <td>Nulla facilisi.</td>
+                                <td class="text-center">
+                                    <span class="label label-danger">Rejected</span>
+                                </td>
+                                <td class="text-right">
+                                    <button type="button" class="btn btn-sm btn-default">
+                                        <em class="fa fa-pencil"></em>
+                                    </button>
+                                    <button type="button" disabled="" class="btn btn-sm btn-danger">
+                                        <em class="fa fa-trash"></em>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-success">
+                                        <em class="fa fa-check"></em>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="nw-editor" style="height: 53px;">
-                    <textarea ng-show="editMode" ng-model="content" class="nw-editor__src ng-pristine ng-untouched ng-valid ng-hide"> </textarea><iframe scrolling="no" frameborder="0" ng-hide="editMode" ng-model="content" ng-wig-editable="" class="nw-editor__res ng-pristine ng-untouched ng-valid"></iframe>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead">Article Data</p>
+                    <p class="lead">SEO Metadata</p>
+                    <div class="form-group">
+                        <p>Title</p>
+                        <input type="text" placeholder="Brief description.." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Description</p>
+                        <textarea rows="5" placeholder="Max 255 characters..." class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p>Keywords</p>
+                        <textarea rows="5" placeholder="Max 1000 characters..." class="form-control"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,8 +174,9 @@
 </section>
 
 @section Script{
-    <script src="~/scripts/ng-wig.min.js" type="text/javascript"></script>
-    <script src="~/scripts/ngDialog.min.js" type="text/javascript"></script>
-    <script src="~/scripts/news.js" type="text/javascript"></script>
+    <script src='~/plugins/text-angular/textAngular-rangy.min.js'></script>
+    <script src='~/plugins/text-angular/textAngular-sanitize.min.js'></script>
+    <script src='~/plugins/text-angular/textAngular.min.js'></script>
+    <script src="~/scripts/newsEdit.js" type="text/javascript"></script>
 }
 

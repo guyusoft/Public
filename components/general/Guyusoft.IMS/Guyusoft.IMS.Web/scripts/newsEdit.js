@@ -1,6 +1,15 @@
-﻿var app = angular.module('IMS');
+﻿angular.module("textAngularditor", ['textAngular'])
+    .controller('wysiwygeditor', ['$scope', 'textAngularManager', function wysiwygeditor($scope, textAngularManager) {
+        $scope.version = textAngularManager.getVersion();
+        $scope.versionNumber = $scope.version.substring(1);
+        $scope.orightml = '<h2>请输入新闻内容</h2>';
+        $scope.htmlcontent = $scope.orightml;
+        $scope.disabled = false;
+    }]);
 
-app.controller('newsController', ['$scope', 'ngDialog', function ($scope, ngDialog) {
+var app = angular.module('IMS');
+
+app.controller('newsEditController', ['$scope', 'ngDialog', function ($scope, ngDialog) {
     $scope.columnDefinition = ["标题", "新闻", "操作"];
 
     $scope.newsItems = JSON.parse($('#dataModel').val());
