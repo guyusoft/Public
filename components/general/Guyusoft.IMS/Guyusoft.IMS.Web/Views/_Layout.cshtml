@@ -3,6 +3,7 @@
 
 <html data-ng-app="IMS">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/styles/bootstrap.css" />
     <link rel="stylesheet" href="~/styles/guyusoft.css" />
@@ -13,7 +14,10 @@
     <title>@ViewBag.Title</title>
 </head>
 <body class="wrapper">
-    <input type="hidden"  value="@JsonConvert.SerializeObject(Model)" id="dataModel"/>
+    @{ 
+        var modelJson = (Model == null ? "" : JsonConvert.SerializeObject(Model));
+    }
+    <input type="hidden"  value="@modelJson" id="dataModel"/>
 
     <nav role="navigation" class="navbar topnavbar">
         @Html.Partial("~/Views/Partial/_navigation.cshtml")

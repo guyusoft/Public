@@ -30,8 +30,8 @@
                     </thead>
                     <tbody>
                         <tr role="row" class="odd" ng-repeat="newsItem in newsItems">
-                            <td class="sorting_1">{{newsItem.Text}}</td>
-                            <td>{{newsItem.Href}}</td>
+                            <td class="sorting_1">{{newsItem.Title}}</td>
+                            <td>{{newsItem.NewsCategoryId}}</td>
                             <td class="text-center">
                                 <button type="button" class="btn btn-sm btn-default" ng-click="delete(newsItem)">
                                     <em class="icon-close"></em>
