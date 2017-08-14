@@ -146,8 +146,10 @@
     <Content Include="Global.asax" />
     <Content Include="images\logo.svg" />
     <Content Include="images\sort_asc.png" />
+    <Content Include="images\sort_asc_disabled.png" />
     <Content Include="images\sort_both.png" />
     <Content Include="images\sort_desc.png" />
+    <Content Include="images\sort_desc_disabled.png" />
     <Content Include="plugins\dataTable\angular-datatables.js" />
     <Content Include="plugins\dataTable\jquery.dataTables.js" />
     <Content Include="scripts\angular1.6.5.min.js" />
