@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/styles/font-awesome.min.css" />
+<link rel="stylesheet" href="~/plugins/text-angular/textAngular.css" />
+
+<section ng-controller="productEditController">
+    <div class="panel-body">
+        <div class="col-lg-9" style="width:868px;">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="" class="ng-pristine ng-valid">
+                        <input type="text" name="article-title" placeholder="产品名称" class="mb-lg form-control input-lg" ng-model="item.ProductName">
+                        <div class="container app" style="width:868px;">
+                            <div text-angular="text-angular" name="htmlcontent" ng-model="item.ProductDesc" ta-disabled='disabled'></div>
+                        </div>
+                        <br>
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <button type="button" class="btn btn-default m-r-10 m-t-10" ng-click="cancel()">
+                                    <em class="fa fa-edit fa-fw"></em>取消
+                                </button>
+                                <button type="button" class="btn btn-primary m-t-10" ng-click="save()">
+                                    <em class="fa fa-check fa-fw"></em>保存
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p class="lead">Article Data</p>
+                    <p class="lead">SEO Metadata</p>
+                    <div class="form-group">
+                        <p>Title</p>
+                        <input type="text" placeholder="Brief description.." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <p>Description</p>
+                        <textarea rows="5" placeholder="Max 255 characters..." class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p>Keywords</p>
+                        <textarea rows="5" placeholder="Max 1000 characters..." class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Script{
+    <script src='~/plugins/text-angular/textAngular-rangy.min.js'></script>
+    <script src='~/plugins/text-angular/textAngular-sanitize.min.js'></script>
+    <script src='~/plugins/text-angular/textAngular.min.js'></script>
+    <script src="~/scripts/productEdit.js" type="text/javascript"></script>
+}
+

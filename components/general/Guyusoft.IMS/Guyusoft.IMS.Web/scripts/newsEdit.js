@@ -1,7 +1,6 @@
 ﻿var app = angular.module('IMS',['textAngular']);
 
 app.controller('newsEditController', ['$scope', '$http', function ($scope, $http) {
-    debugger;
     if ($('#dataModel').val() != '') {
         $scope.item = JSON.parse($('#dataModel').val());
     }

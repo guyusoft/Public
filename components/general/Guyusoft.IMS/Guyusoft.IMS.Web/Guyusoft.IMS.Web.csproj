@@ -130,6 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RegisterComponent.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ProductCategoryController.cs" />
+    <Compile Include="Controllers\NewsCategoryController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -153,6 +157,10 @@
     <Content Include="plugins\dataTable\angular-datatables.js" />
     <Content Include="plugins\dataTable\jquery.dataTables.js" />
     <Content Include="scripts\angular1.6.5.min.js" />
+    <Content Include="scripts\product.js" />
+    <Content Include="scripts\productEdit.js" />
+    <Content Include="scripts\productCategory.js" />
+    <Content Include="scripts\newsCategory.js" />
     <Content Include="scripts\newsEdit.js" />
     <Content Include="scripts\news.js" />
     <Content Include="scripts\guyusoft.js" />
@@ -240,6 +248,24 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NewsCategory\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ProductCategory\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

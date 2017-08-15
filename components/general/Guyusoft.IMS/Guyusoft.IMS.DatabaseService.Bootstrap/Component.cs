@@ -26,6 +26,14 @@ namespace Guyusoft.IMS.DatabaseService.Bootstrap
             _container.RegisterType<IServiceExtension<NavigationMenu>, ModelServiceExtension<NavigationMenu>>();
 
             _container.RegisterType<IServiceExtension<News>, ModelServiceExtension<News>>();
+
+            _container.RegisterType<IServiceExtension<NewsCategory>, ModelServiceExtension<NewsCategory>>();
+
+            _container.RegisterType<IServiceExtension<Product>, ModelServiceExtension<Product>>();
+
+            _container.RegisterType<IServiceExtension<ProductCategory>, ModelServiceExtension<ProductCategory>>();
+
+            _container.RegisterType<IServiceExtension<UserDetail>, ModelServiceExtension<UserDetail>>();
         }
     }
 }

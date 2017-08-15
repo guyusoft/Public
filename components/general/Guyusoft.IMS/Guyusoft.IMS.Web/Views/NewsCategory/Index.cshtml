@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<script type="text/ng-template" id="newsCategoryAddAndEdit">
+<div class="panel panel-default dialog">
+    <div class="panel-heading">新增类别</div>
+    <div class="panel-body">
+    <form class="form-horizontal ng-pristine ng-valid">
+        <div class="form-group">
+            <label class="col-lg-4 control-label">类别名称</label>
+            <div class="col-lg-8">
+                <input type="text" placeholder="类别名称" class="form-control" ng-model="item.CategoryName">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-4 col-lg-8">
+                <button type="button" class="btn btn-sm btn-default" ng-click="save()">确定</button>
+                <button type="button" class="btn btn-sm btn-default" ng-click="cancel()">取消</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+</script>
+
+<section ng-controller="newsCategoryController">
+    <div class="content-wrapper ng-scope ng-fadeInUp">
+        <h3>新闻类别
+            <button type="button" class="btn btn-sm btn-primary" ng-click="add()">新增</button>
+        </h3>
+
+        <table datatable="ng" class="row-border hover">
+            <thead>
+                <tr role="row">
+                    <th style="width: 120px" tabindex="0" rowspan="1" colspan="1" ng-repeat="colDef in columnDefinition">
+                        <strong>{{colDef}}</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr role="row" class="odd" ng-repeat="item in items">
+                    <td class="sorting_1">{{item.Id}}</td>
+                    <td>{{item.CategoryName}}</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-sm btn-danger" ng-click="delete(item)">
+                            <em class="icon-close"></em>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-warning" ng-click="edit(item)">
+                            <em class="icon-note"></em>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+@section Script{
+    <script src="~/scripts/newsCategory.js" type="text/javascript"></script>
+}
+

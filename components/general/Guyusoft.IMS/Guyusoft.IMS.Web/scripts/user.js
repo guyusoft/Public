@@ -1,9 +1,9 @@
 ﻿var app = angular.module('IMS');
 
-app.controller('newsController', ['$scope', 'ngDialog', '$http', function ($scope, ngDialog, $http) {
-    $scope.columnDefinition = ["标题", "类别", "操作"];
+app.controller('userController', ['$scope', 'ngDialog', '$http', function ($scope, ngDialog, $http) {
+    $scope.columnDefinition = ["登录名", "通讯地址", "Email",'操作'];
 
-    $scope.newsItems = JSON.parse($('#dataModel').val());
+    $scope.Items = JSON.parse($('#dataModel').val());
 
     $scope.item = {};
 
@@ -11,7 +11,7 @@ app.controller('newsController', ['$scope', 'ngDialog', '$http', function ($scop
         $scope.item = item;
 
         ngDialog.open({
-            template: '<p>确定删除该新闻？</p> \
+            template: '<p>确定删除该用户？</p> \
                 <div><button type="button" class="btn btn-sm btn-default" ng-click="remove()">确定</button> \
                 <button type="button" class="btn btn-sm btn-default" ng-click="cancel()">取消</button></div>',
             plain: true,
@@ -20,9 +20,9 @@ app.controller('newsController', ['$scope', 'ngDialog', '$http', function ($scop
     }
 
     $scope.remove = function () {
-        $http.post('/News/Delete', $scope.item).then(function (res) {
+        $http.post('/User/Delete', $scope.item).then(function (res) {
             if (res.data) {
-                $scope.newsItems.splice($.inArray($scope.item, $scope.newsItems), 1);
+                $scope.Items.splice($.inArray($scope.item, $scope.Items), 1);
             }
         });
 
@@ -34,11 +34,11 @@ app.controller('newsController', ['$scope', 'ngDialog', '$http', function ($scop
     }
 
     $scope.edit = function (item) {
-        window.location.href = "/News/Edit?id=" +item.Id;
+        window.location.href = "/User/Edit?id=" + item.Id;
     };
 
     $scope.add = function (item) {
-        window.location.href = "/News/Edit?id=0";
+        window.location.href = "/User/Edit?id=0";
     };
 
 }]);
