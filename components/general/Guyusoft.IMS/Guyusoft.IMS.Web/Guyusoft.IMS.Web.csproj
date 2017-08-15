@@ -157,6 +157,8 @@
     <Content Include="plugins\dataTable\angular-datatables.js" />
     <Content Include="plugins\dataTable\jquery.dataTables.js" />
     <Content Include="scripts\angular1.6.5.min.js" />
+    <Content Include="scripts\user.js" />
+    <Content Include="scripts\userEdit.js" />
     <Content Include="scripts\product.js" />
     <Content Include="scripts\productEdit.js" />
     <Content Include="scripts\productCategory.js" />
