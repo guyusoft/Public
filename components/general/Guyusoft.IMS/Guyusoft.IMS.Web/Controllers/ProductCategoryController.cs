@@ -21,6 +21,17 @@ namespace Guyusoft.IMS.Web.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public JsonResult GetAll()
+        {
+            var result = new JsonResult();
+
+            result.Data = _serviceExtension.GetAll();
+            result.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+
+            return result;
+        }
+
         [HttpPost]
         public JsonResult Edit(ProductCategory item)
         {

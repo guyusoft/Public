@@ -1,7 +1,7 @@
 ﻿var app = angular.module('IMS');
 
 app.controller('newsController', ['$scope', 'ngDialog', '$http', function ($scope, ngDialog, $http) {
-    $scope.columnDefinition = ["标题", "类别", "操作"];
+    $scope.columnDefinition = ["标题", "操作"];
 
     $scope.newsItems = JSON.parse($('#dataModel').val());
 

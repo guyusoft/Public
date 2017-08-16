@@ -1,60 +1,78 @@
-﻿<div class="aside-inner">
-    <nav class="sidebar">
+﻿<div class="aside-inner" ng-controller="sidebarController">
+    <script type="text/ng-template" id="sidebar-renderer.html">
+        <span ng-if="item.heading">{{(item.text}}</span>
+        <a ng-if="!item.heading" ng-href="{{item.sref}}" title="{{item.text}}">
+            <em ng-if="item.icon" class="{{item.icon}}"></em>
+            <div ng-if="item.alert" ng-class="item.label || 'label label-success'" class="pull-right">{{item.alert}}</div>
+            <span>{{item.text}}</span>
+        </a>
+        <ul ng-if="item.submenu" collapse="isCollapse(pIndex)" ng-init="addCollapse(pIndex, item)" class="nav sidebar-subnav">
+            <li class="sidebar-subnav-header">{{item.text}}</li>
+            <li ng-repeat="item in item.submenu" ng-include="'sidebar-renderer.html'" ng-class="getMenuItemPropClasses(item)" ng-init="pIndex=(pIndex+'-'+$index); inSubmenu = true" ng-click="toggleCollapse(pIndex)"></li>
+        </ul>
+    </script>
+    <nav sidebar="" sidebar-anyclick-close="" class="sidebar">
         <ul class="nav">
-            <li class="nav-heading">
-                <span class="ng-binding ">Main Navigation</span>
-            </li>
-            <li>
-                <a title="Dashboard" class="">
-                    <em class="icon-speedometer"></em>
-                    <div class="pull-right ng-binding  label label-info">3</div>
-                    <span class="ng-binding">Dashboard</span></a>
-                <ul class="nav sidebar-subnav collapse" style="height: 0px;">
-                    <li class="sidebar-subnav-header ng-binding">Dashboard</li>
-                    <li class="">
-                        <a title="Dashboard v1" class="" href="#">
-                            <span class="ng-binding">Dashboard v1</span></a>
-                    </li>
-                    <li class="">
-                        <a title="Dashboard v2" class="" href="#">
-                            <span class="ng-binding">Dashboard v2</span></a>
-                    </li>
-                    <li class="">
-                        <a title="Dashboard v3" class="" href="#">
-                            <span class="ng-binding">Dashboard v3</span></a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a title="Documentation" class="" href="/News/Index">
-                    <em class="icon-graduation"></em>
-                    <span class="ng-binding">新闻</span></a>
-            </li>
-            <li>
-                <a title="Documentation" class="" href="/NewsCategory/Index">
-                    <em class="icon-graduation"></em>
-                    <span class="ng-binding">新闻类别</span>
-                </a>
-            </li>
-            <li>
-                <a title="Documentation" class="" href="/Product/Index">
-                    <em class="icon-graduation"></em>
-                    <span class="ng-binding">产品</span>
-                </a>
-            </li>
-            <li>
-                <a title="Documentation" class="" href="/ProductCategory/Index">
-                    <em class="icon-graduation"></em>
-                    <span class="ng-binding">产品类别</span>
-                </a>
-            </li>
-            <li>
-                <a title="Documentation" class="" href="/User/Index">
-                    <em class="icon-graduation"></em>
-                    <span class="ng-binding">用户管理</span>
-                </a>
-            </li>
+            <li ng-class="getMenuItemPropClasses(item)" ng-repeat="item in menuItems" ng-init="pIndex = $index" ng-include="'sidebar-renderer.html'" ng-click="toggleCollapse(pIndex, true)"></li>
         </ul>
     </nav>
+    <!-- END Sidebar (left)-->
+    @*<nav class="sidebar">
+            <ul class="nav">
+                <li class="nav-heading">
+                    <span class="ng-binding ">基础信息配置</span>
+                </li>
+                <li>
+                    <a title="Dashboard" class="">
+                        <em class="icon-speedometer"></em>
+                        <div class="pull-right ng-binding  label label-info">3</div>
+                        <span class="ng-binding">Dashboard</span></a>
+                    <ul class="nav sidebar-subnav collapse" style="height: 0px;">
+                        <li class="sidebar-subnav-header ng-binding">Dashboard</li>
+                        <li class="">
+                            <a title="Dashboard v1" class="" href="#">
+                                <span class="ng-binding">Dashboard v1</span></a>
+                        </li>
+                        <li class="">
+                            <a title="Dashboard v2" class="" href="#">
+                                <span class="ng-binding">Dashboard v2</span></a>
+                        </li>
+                        <li class="">
+                            <a title="Dashboard v3" class="" href="#">
+                                <span class="ng-binding">Dashboard v3</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a title="Documentation" class="" href="/News/Index">
+                        <em class="icon-graduation"></em>
+                        <span class="ng-binding">新闻</span></a>
+                </li>
+                <li>
+                    <a title="Documentation" class="" href="/NewsCategory/Index">
+                        <em class="icon-graduation"></em>
+                        <span class="ng-binding">新闻类别</span>
+                    </a>
+                </li>
+                <li>
+                    <a title="Documentation" class="" href="/Product/Index">
+                        <em class="icon-graduation"></em>
+                        <span class="ng-binding">产品</span>
+                    </a>
+                </li>
+                <li>
+                    <a title="Documentation" class="" href="/ProductCategory/Index">
+                        <em class="icon-graduation"></em>
+                        <span class="ng-binding">产品类别</span>
+                    </a>
+                </li>
+                <li>
+                    <a title="Documentation" class="" href="/User/Index">
+                        <em class="icon-graduation"></em>
+                        <span class="ng-binding">用户管理</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>*@
 </div>

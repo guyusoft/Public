@@ -12,6 +12,10 @@ app.controller('productEditController', ['$scope', '$http', function ($scope, $h
         $scope.item.ProductCategoryId = 1;
     }
 
+    $http.get('/ProductCategory/GetAll').then(function (res) {
+        $scope.categories = res.data;
+    });
+
     $scope.save = function () {
         $http.post('/Product/Edit', $scope.item).then(function (res) {
             if (res.data && res.data.Id > 0) {

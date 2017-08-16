@@ -13,6 +13,10 @@ app.controller('newsEditController', ['$scope', '$http', function ($scope, $http
         $scope.item.Content = '<h2>Content</h2>';
     }
 
+    $http.get('/NewsCategory/GetAll').then(function (res) {
+        $scope.categories = res.data;
+    });
+
     $scope.save = function () {
         $http.post('/News/Edit', $scope.item).then(function (res) {
             if (res.data && res.data.Id > 0) {

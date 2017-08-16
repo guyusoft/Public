@@ -1,7 +1,7 @@
 ﻿var app = angular.module('IMS');
 
 app.controller('poductController', ['$scope', 'ngDialog', '$http', function ($scope, ngDialog, $http) {
-    $scope.columnDefinition = ["产品名称", "类别", "操作"];
+    $scope.columnDefinition = ["产品名称", "操作"];
 
     $scope.Items = JSON.parse($('#dataModel').val());
 
